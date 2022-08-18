@@ -1,0 +1,79 @@
+.main {
+    background-color: #A7D1EF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.leftSide {
+    height: 100%;
+    flex: 2;
+    margin: 150px 10px 10px 90px;
+}
+
+.rightSide {
+    flex: 3;
+    align-self: stretch;
+    margin: 10px 10px 10px 10px;
+}
+
+.image1 {
+    position: absolute;
+    width: 623px;
+    height: 625px;
+    right: 80px;
+    bottom: 0px;
+}
+
+.image2 {
+    position: absolute;
+    width: 690px;
+    height: 600px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.thankYou {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 68px;
+    margin-bottom: 45px;
+    color: #353B7D;
+    font-family: 'Bebas Neue';
+}
+
+.secondHead {
+    font-size: 50px;
+    margin-bottom: 40px;
+    color: white;
+    width: 280px;
+    font-family: 'Bebas Neue';
+    line-height: 100%;
+}
+
+.firstDesc {
+    font-size: 18px;
+    color: white;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.secondDesc {
+    font-size: 18px;
+    color: white;
+    
+}
+
+.link {
+    color: #353B7D;
+    font-size: 15px;
+}
+
+.image3{
+    position: absolute;
+    margin-top: -3px;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+}
