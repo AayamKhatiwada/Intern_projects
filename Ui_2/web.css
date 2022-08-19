@@ -1,0 +1,217 @@
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-family: 'PT Serif';
+    margin: 0;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.title1 {
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.title2 {
+    width: fit-content;
+}
+
+.navBar {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.items {
+    margin: 25px 30px 25px 30px;
+    padding-bottom: 2px;
+}
+
+.familyLaw {
+    background-color: #EED1C773;
+    padding: 25px 20px 20px 20px;
+}
+
+.familyImage {
+    width: 1200px;
+    height: 550px;
+}
+
+.titlefamily {
+    font-family: 'Playfair Display', serif;
+    font-size: 68px;
+    font-weight: 600;
+    line-height: 58px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #D4410E;
+    display: flex;
+    flex-direction: row;
+    margin: 45px 0 35px 0;
+}
+
+.text {
+    width: 0 10px 0 10px;
+}
+
+.line {
+    width: 33%;
+}
+
+.descFamily {
+    width: 70%;
+    margin-left: 17%;
+    margin-bottom: 50px;
+    font-family: PT Serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+.lawyers {
+    display: flex;
+    margin: 60px;
+}
+
+.lawyersHead {
+    flex: 1;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 58px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.descLawyer {
+    flex: 2.5;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.services {
+    background: #EED1C780;
+    padding: 30px 0 60px 0;
+}
+
+.servicesHead {
+    display: flex;
+}
+
+.line1 {
+    background-color: white;
+    border: none;
+    width: 100%;
+    height: 1px;
+    margin-top: 25px;
+}
+
+.servicesText {
+    width: 200%;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 58px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.descServices {
+    width: 50%;
+    margin-left: 25%;
+    font-family: 'PT Serif';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.helpHead {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 58px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.help {
+    padding: 30px 0 30px 10px;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.box {
+    width: 300px;
+    padding: 30px;
+    margin-left: 30px;
+}
+
+.boxHead {
+    font-family: PT Serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 30px 0 30px 0;
+
+}
+
+.descBox {
+    font-family: PT Serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+.footer {
+    background: #EED1C780;
+    padding: 50px 50px 10px 50px;
+}
+
+.social-icon {
+    margin-bottom: 20px;
+}
+
+.icon{
+    margin-right: 10px;
+}
+
+.descFooter {
+    font-family: PT Serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 20px;
+    color: #606060;
+}
