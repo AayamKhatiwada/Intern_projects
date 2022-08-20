@@ -8,7 +8,7 @@
 
 .leftSide {
     flex: 2;
-    margin: 150px 10px 10px 90px;
+    margin: 230px 20px 20px 100px;
 }
 
 .rightSide {
@@ -18,63 +18,118 @@
 
 .image1 {
     position: absolute;
-    width: 623px;
-    height: 625px;
-    margin-top: 15px;
+    width: 780px;
+    height: 860px;
+    margin-top: 80px;
 }
 
 .image2 {
     position: absolute;
-    width: 690px;
-    height: 600px;
-    margin: 39px 0 0 10px;
+    width: 1030px;
+    height: 890px;
+    margin: 49px 0 0 0;
 }
 
 .thankYou {
     font-style: normal;
-    font-weight: 400;
-    font-size: 100px;
-    line-height: 68px;
-    margin-bottom: 45px;
+    font-weight: 450;
+    font-size: 130px;
+    line-height: 73px;
+    margin-bottom: 70px;
     color: #353B7D;
     font-family: 'Bebas Neue';
 }
 
 .secondHead {
-    font-size: 50px;
-    margin-bottom: 40px;
+    font-size: 60px;
+    margin-bottom: 50px;
     color: white;
-    width: 250px;
+    width: 280px;
     font-family: 'Bebas Neue';
-    line-height: 100%;
+    line-height: 105%;
 }
 
 .firstDesc {
-    font-size: 18px;
+    font-size: 23px;
     color: white;
-    width: 300px;
-    margin-bottom: 20px;
+    width: 450px;
+    margin-bottom: 30px;
 }
 
 .secondDesc {
-    font-size: 18px;
+    font-size: 23px;
     color: white;
     
 }
 
 .link {
     color: #353B7D;
-    font-size: 15px;
+    font-size: 23px;
 }
 
 .image3{
     position: absolute;
-    margin-top: -3px;
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
+    margin-top: -13px;
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
 }
 
+
+@media screen and (max-width: 1269px) { 
+    .leftSide {
+        margin: 150px 10px 10px 90px;
+    }
+
+    .image1 {
+        width: 623px;
+        height: 625px;
+        margin-top: 15px;
+    }
+    
+    .image2 {
+        width: 690px;
+        height: 600px;
+        margin: 39px 0 0 10px;
+    }
+    
+    .thankYou {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 100px;
+        line-height: 68px;
+        margin-bottom: 45px;
+    }
+    
+    .secondHead {
+        font-size: 50px;
+        margin-bottom: 40px;
+        width: 250px;
+        line-height: 100%;
+    }
+    
+    .firstDesc {
+        font-size: 18px;
+        width: 300px;
+        margin-bottom: 20px;
+    }
+    
+    .secondDesc {
+        font-size: 18px;      
+    }
+    
+    .link {
+        font-size: 15px;
+    }
+    
+    .image3{
+        margin-top: -3px;
+        margin-left: 5px;
+        width: 30px;
+        height: 30px;
+    }
+    
+ }
 
 @media screen and (max-width: 1024px) { 
     .leftSide {
@@ -192,58 +247,54 @@
  }
 
    
-@media screen and (max-width: 321px) { 
-    main{
-        flex-direction: column;
-        flex: wrap;
-    }
-    
+@media screen and (max-width: 425px) { 
+
     .leftSide {
-        margin: 110px 0 10px 100px;
+        margin: 200px 0 10px 100px;
     }
     
     .image1 {
-        width: 540px;
-        height: 556px;
-        margin-top: 45px;
-        margin-left: -40px;
+        width: 640px;
+        height: 640px;
+        margin-top: 1040px;
+        margin-left: -650px;
     }
     
     .image2 {
-        width: 490px;
-        height: 560px;
-        margin: 39px 0 0 10px;
+        width: 810px;
+        height: 585px;
+        margin: 1100px 0 0 -800px;
     }
     
     .thankYou {
         font-style: normal;
-        font-weight: 400;
-        font-size: 100px;
-        line-height: 90px;
-        margin-bottom: 50px;
+        font-weight: 700;
+        font-size: 200px;
+        line-height: 180px;
+        margin-bottom: 60px;
+        width: 1000px;
     }
     
     .secondHead {
-        font-size: 55px;
+        font-size: 100px;
         margin-bottom: 40px;
-        width: 250px;
-        font-family: 'Bebas Neue';
-        line-height: 100%;
+        width: 600px;
+        line-height: 120%;
     }
     
     .firstDesc {
-        font-size: 20px;
-        width: 300px;
-        margin-bottom: 23px;
+        font-size: 50px;
+        width: 900px;
+        margin-bottom: 40px;
     }
     
     .secondDesc {
-        width: 400px;
-        font-size: 20px;
+        width: 1000px;
+        font-size: 50px;
     }
     
     .link {
-        font-size: 15px;
+        font-size: 40px;
     }
     
     .image3{
