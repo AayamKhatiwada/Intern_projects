@@ -1,74 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="web_3.css">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="navbar">
-        <img src="image/logo.svg" alt="" class="logo">
-        <div class="navbarContents">
-            <div class="navbarItem">Home</div>
-            <div class="navbarItem">Buy Now</div>
-            <div class="navbarItem">FAQ</div>
-            <div class="navbarItem">Compatible Phones</div>
-            <div class="navbarItem">Contact</div>
+    <div class="row navbar">
+        <img src="image/logo.svg" alt="" class="col-4 logo">
+        <div class="col-4 row navbarContents">
+            <div class="col-2 navbarItem">Home</div>
+            <div class="col-2 navbarItem">Buy Now</div>
+            <div class="col-2 navbarItem">FAQ</div>
+            <div class="col-4 navbarItem">Compatible Phones</div>
+            <div class="col-2 navbarItem">Contact</div>
         </div>
-        <div class="shopTags">Shop Tags</div>
-        <i class="fal fa-shopping-cart"></i>
+        <div class="col-4 row shopCart">
+            <div class="col-2 shopTags">Shop Tags</div>
+            <i class="col-2 fal fa-shopping-cart"></i>
+        </div>
     </div>
 
-    <div class="firstMain">
-        <div class="firstLeft">
+    <div class="row firstMain">
+        <div class="col-5 firstLeft">
             <div class="firstTextFirst">Your digital business card</div>
             <div class="secondTextFirst">Instanly Share Anything.</div>
             <div class="thirdTextFirst">Fully customizable design</div>
             <div class="forthTextFirst">Starting at $ 25</div>
-            <div class="fifthTextFirst">Buy Now</div>
+            <div class="fifthTextFirst">Shop Now</div>
         </div>
-        <img src="image/Image.png" alt="" class="image">
+        <img src="image/Image.png" alt="" class="col-7 image">
     </div>
 
     <div class="secondMain">
-        <div class="firstTextSecond">Funky Designs. <span>Freah Tech</span></div>
+        <div class="firstTextSecond">Funky Designs. <span style="font-weight: 350;">Freah Tech</span></div>
         <div class="secondTextSecond">Shop Now</div>
-        <img src="image/Polygon.svg" alt="" class="ploygon1">
+        <img src="image/Polygon 3.svg" alt="" class="ploygon1">
         <img src="image/Polygon.svg" alt="" class="ploygon2">
-        <img src="image/Popsockets.svg" alt="" class="popsockets">
         <img src="image/DESIGN 2.svg" alt="" class="design2">
+        <img src="image/Popsockets.svg" alt="" class="popsockets">
     </div>
 
     <div class="thirdMain">
-        <div class="firstTextThird">Your Digital Business Card</div>
-        <div class="secondTextThird">Play Videos</div>
+        <div class="business">
+            <img src="image/business.png" alt="">
+        </div>
+        <div class="textThird">
+            <div class="firstTextThird"><span style="font-weight: 350;">Your Digital</span> Business Card</div>
+            <div class="secondTextThird">Play Videos</div>
+        </div>
     </div>
 
-    <div class="fourthMain">
-        <div class="card">
+    <div class="row fourthMain">
+        <div class="col-3 card">
             <img src="image/Marble.svg" alt="" class="imgCard">
             <div class="cardTitle">Marble</div>
             <div class="cardDesc">Smart Business Card</div>
             <div class="shopNow">Shop Now</div>
         </div>
 
-        <div class="card">
+        <div class="col-3 card">
             <img src="image/Nebula.svg" alt="" class="imgCard">
             <div class="cardTitle">Nebula</div>
             <div class="cardDesc">Popsmart</div>
             <div class="shopNow">Shop Now</div>
         </div>
 
-        <div class="card">
+        <div class="col-3 card">
             <img src="image/Diamond.svg" alt="" class="imgCard">
             <div class="cardTitle">Diamond</div>
             <div class="cardDesc">Smart Tag</div>
             <div class="shopNow">Shop Now</div>
         </div>
 
-        <div class="card">
+        <div class="col-3 card">
             <img src="image/Golden.svg" alt="" class="imgCard">
             <div class="cardTitle">Golden</div>
             <div class="cardDesc">Smart Business Card</div>
@@ -76,49 +91,63 @@
         </div>
     </div>
 
-    <div class="fifthMain">
-        <img src="image/Instantly.svg" alt="" class="imgOne">
+    <div class="fifthMain row">
+        <img src="image/Instantly.svg" alt="" class="imgOne col-6">
 
-        <div class="secondGrid">
+        <div class=" col-6">
             <img src="image/Polygon.svg" alt="" class="polygon">
-            <div class="firstTextGrid">Your digital business card</div>
-            <div class="secondTextGrid">Instantly Share Anything</div>
-            <div class="thirdTextGrid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet auctor dui, sit amet dapibus elit. Aliquam in rhoncus enim. Maecenas venenatis vulputate neque. Nullam varius, tellus eu ullamcorper pulvinar, ipsum arcu mollis leo, quis lacinia arcu purus ut nisi. Integer porta bibendum tortor, nec pulvinar augue hendrerit eget.</div>
-            <div class="forthTextGrid">Find Out More</div>
+            <div class="textGrid">
+                <div class="firstTextGrid">Your digital business card</div>
+                <div class="secondTextGrid">Instantly Share Anything.</div>
+                <div class="thirdTextGrid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet auctor dui,
+                    sit amet dapibus elit. Aliquam in rhoncus enim. Maecenas venenatis vulputate neque. Nullam varius,
+                    tellus eu ullamcorper pulvinar, ipsum arcu mollis leo, quis lacinia arcu purus ut nisi. Integer porta
+                    bibendum tortor, nec pulvinar augue hendrerit eget.</div>
+                <div class="forthTextGrid">Find Out More</div>
+            </div>
         </div>
 
-        <img src="image/Proin.svg" alt="" class="imgOne">
-        
-        <div class="forthGrid">
+        <img src="image/Proin.svg" alt="" class="imgOne col-6">
+
+        <div class="margin col-6 textGrid" style="background: #F5F5F5;">
             <div class="firstTextGrid">Your digital business card</div>
             <div class="secondTextGrid">Proin Vitae Dui</div>
-            <div class="thirdTextGrid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet auctor dui, sit amet dapibus elit. Aliquam in rhoncus enim. Maecenas venenatis vulputate neque. Nullam varius, tellus eu ullamcorper pulvinar, ipsum arcu mollis leo, quis lacinia arcu purus ut nisi. Integer porta bibendum tortor, nec pulvinar augue hendrerit eget.</div>
-            <div class="forthTextGrid">Find Out More</div>
-        </div>
-        
-        <div class="fifthGrid">
-            <div class="firstTextGrid">Your digital business card</div>
-            <div class="secondTextGrid">Lorem Ipsum Dolor</div>
-            <div class="thirdTextGrid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet auctor dui, sit amet dapibus elit. Aliquam in rhoncus enim. Maecenas venenatis vulputate neque. Nullam varius, tellus eu ullamcorper pulvinar, ipsum arcu mollis leo, quis lacinia arcu purus ut nisi. Integer porta bibendum tortor, nec pulvinar augue hendrerit eget.</div>
+            <div class="thirdTextGrid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet auctor dui,
+                sit amet dapibus elit. Aliquam in rhoncus enim. Maecenas venenatis vulputate neque. Nullam varius,
+                tellus eu ullamcorper pulvinar, ipsum arcu mollis leo, quis lacinia arcu purus ut nisi. Integer porta
+                bibendum tortor, nec pulvinar augue hendrerit eget.</div>
             <div class="forthTextGrid">Find Out More</div>
         </div>
 
-        <img src="image/Lorem.svg" alt="" class="imgOne">
+        <div class="margin col-6 textGrid">
+            <div class="firstTextGrid">Your digital business card</div>
+            <div class="secondTextGrid">Lorem Ipsum Dolor</div>
+            <div class="thirdTextGrid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet auctor dui,
+                sit amet dapibus elit. Aliquam in rhoncus enim. Maecenas venenatis vulputate neque. Nullam varius,
+                tellus eu ullamcorper pulvinar, ipsum arcu mollis leo, quis lacinia arcu purus ut nisi. Integer porta
+                bibendum tortor, nec pulvinar augue hendrerit eget.</div>
+            <div class="forthTextGrid">Find Out More</div>
+        </div>
+
+        <img src="image/Lorem.svg" alt="" class="imgOne col-6">
     </div>
 
     <div class="sixthMain">
         <img src="image/crown (Stroke).svg" alt="" class="imgCrown">
-        <div class="titleSixthMain">orem Ipsum Dolor Sit Amet</div>
-        <div class="textSixthMain">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet auctor dui, sit amet dapibus elit. Aliquam in rhoncus enim. Maecenas venenatis vulputate neque. Nullam varius, tellus eu ullamcorper pulvinar, ipsum arcu mollis leo, quis lacinia arcu purus ut nisi. Integer porta bibendum tortor, nec pulvinar augue hendrerit eget.</div>
+        <div class="titleSixthMain">Lorem Ipsum Dolor Sit Amet</div>
+        <div class="textSixthMain">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet auctor dui, sit
+            amet dapibus elit. Aliquam in rhoncus enim. Maecenas venenatis vulputate neque. Nullam varius, tellus eu
+            ullamcorper pulvinar, ipsum arcu mollis leo, quis lacinia arcu purus ut nisi. Integer porta bibendum tortor,
+            nec pulvinar augue hendrerit eget.</div>
         <div class="buttonSixthMain">Find Out More</div>
     </div>
 
-    <div class="footer">
-        <div class="firstRow">
+    <div class="footer row">
+        <div class="firstRow col-4">
             <div class="titleFirstRow">Website</div>
 
             <div class="itemsFirstRow">
-                <div class="firstRowitem">FAQ</div>
+                <div class="firstRowitem ">FAQ</div>
                 <div class="firstRowitem">Shop</div>
                 <div class="firstRowitem">Contact</div>
             </div>
@@ -131,17 +160,20 @@
             <div class="copyright">Copyright 2021 Tappett Inc.</div>
         </div>
 
-        <div class="secondRow">
+        <div class="secondRow col-4">
             <div class="aboutUs">About Us</div>
-            <div class="descAboutUs">We are looking to help everyone connect much easier, no matter if its meeting old friends, or business partner's and client's simply and instantly by a Tap!</div>
+            <div class="descAboutUs">We are looking to help everyone connect much easier, no matter if its meeting old
+                friends, or business partner's and client's simply and instantly by a Tap!</div>
         </div>
 
-        <div class="thirdRow">
+        <div class="thirdRow col-4">
             <div class="newReleases">New Releases</div>
-            <div class="descNewReleases">We are working to introduce a few more products very soon. Stay tuned for more updates on our website!</div>
+            <div class="descNewReleases">We are working to introduce a few more products very soon. Stay tuned for more
+                updates on our website!</div>
             <div class="textbox">Your email</div>
             <button class="subscribe">Subscribe</button>
         </div>
     </div>
 </body>
+
 </html>
