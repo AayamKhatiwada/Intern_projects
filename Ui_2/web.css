@@ -5,6 +5,7 @@ body {
     justify-content: center;
     font-family: 'PT Serif';
     margin: 0;
+    width: fit-content;
 }
 
 .title {
@@ -35,6 +36,10 @@ body {
 .items {
     margin: 25px 30px 25px 30px;
     padding-bottom: 2px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .familyLaw {
@@ -200,7 +205,7 @@ body {
     margin-bottom: 20px;
 }
 
-.icon{
+.icon {
     margin-right: 10px;
 }
 
@@ -213,4 +218,116 @@ body {
     text-align: center;
     margin-top: 20px;
     color: #606060;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .items {
+        font-weight: 600;
+        font-size: 18px;
+    }
+    
+    .titlefamily {
+        font-size: 73px;
+        font-weight: 700;
+    }
+
+    .descFamily {
+        font-size: 23px;
+        font-weight: 450;
+    }
+
+    .lawyersHead {
+        font-size: 47px;
+        font-weight: 450;
+    }
+
+    .descLawyer {
+        font-size: 21px;
+    }
+
+    .servicesText {
+        font-size: 37px;
+        font-weight: 450;
+    }
+
+    .descServices {
+        font-size: 21px;
+        font-weight: 450;
+    }
+
+    .helpHead {
+        font-size: 47px;
+        font-weight: 450;
+    }
+
+    .boxHead {
+        font-size: 23px;
+        font-weight: 750;
+    }
+
+    .descBox {
+        font-size: 21px;
+        font-weight: 400;
+    }
+
+    .descFooter {
+        font-size: 21px;
+        font-weight: 450;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .titlefamily {
+        font-size: 83px;
+        font-weight: 800;
+    }
+
+    .descFamily {
+        font-size: 33px;
+        font-weight: 500;
+    }
+
+    .lawyersHead {
+        font-size: 57px;
+        font-weight: 500;
+    }
+
+    .descLawyer {
+        font-size: 31px;
+    }
+
+    .servicesText {
+        font-size: 47px;
+        font-weight: 500;
+    }
+
+    .descServices {
+        font-size: 31px;
+        font-weight: 500;
+    }
+
+    .helpHead {
+        font-size: 57px;
+        font-weight: 500;
+    }
+
+    .boxHead {
+        font-size: 33px;
+        font-weight: 800;
+    }
+
+    .descBox {
+        font-size: 31px;
+        font-weight: 450;
+    }
+
+    .descFooter {
+        font-size: 31px;
+        font-weight: 500;
+    }
+
 }
