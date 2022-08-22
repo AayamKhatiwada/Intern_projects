@@ -1,44 +1,10 @@
 body {
     margin: 0;
-    overflow-x: hidden;
-}
-
-.logo {
-    height: 65px;
-    padding-left: 130px;
-}
-
-.shopCart {
-    justify-content: center;
+    width: fit-content;
 }
 
 .navbar {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-}
-
-.navbarContents {
-    font-family: 'Avenir LT Std';
-    font-style: normal;
-    font-weight: 750;
-    font-size: 14px;
-    line-height: 17px;
-}
-
-.shopTags {
-    font-family: 'Avenir LT Std';
-    font-style: normal;
-    font-weight: 750;
-    font-size: 14px;
-    line-height: 17px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background-color: #046DC4;
-    color: white;
-    padding: 8px 18px;
-    gap: 10px;
-    border-radius: 60px;
-    width: 100px;
 }
 
 .firstLeft {
@@ -94,23 +60,6 @@ body {
 
 
     color: #000000;
-}
-
-.fifthTextFirst {
-    border-radius: 60px;
-    background: #E1A532;
-    border-radius: 60px;
-    width: 140px;
-    height: 37px;
-    font-family: 'Avenir LT Std';
-    font-style: normal;
-    font-weight: 750;
-    font-size: 14px;
-    line-height: 17px;
-    align-items: center;
-    text-align: center;
-    padding: 10px 0;
-    color: #FFFFFF;
 }
 
 .image {

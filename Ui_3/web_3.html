@@ -16,20 +16,49 @@
 </head>
 
 <body>
-    <div class="row navbar">
-        <img src="image/logo.svg" alt="" class="col-4 logo">
-        <div class="col-4 row navbarContents">
-            <div class="col-2 navbarItem">Home</div>
-            <div class="col-2 navbarItem">Buy Now</div>
-            <div class="col-2 navbarItem">FAQ</div>
-            <div class="col-4 navbarItem">Compatible Phones</div>
-            <div class="col-2 navbarItem">Contact</div>
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-around sticky-top bg-white">
+        <div class="container">
+         <div class="navimg ">
+           <a href="#" class="navabar-brand d-long-none mx-auto"></a>
+           <img src="./image/logo.svg" alt="">
+         </div>
+        
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse " id="navmenu">
+              <div class="navbar-nav mx-auto">
+               <ul class="navbar-nav d-flex">
+                 <li class="nav-item border-bottom border-primary border-2">
+                   <a class="nav-link active px-3" aria-current="page" href="#">Home</a>
+                   
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link active px-3" href="#">Buy now</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link active px-3" href="#">FAQ</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link active px-3" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                 </li>
+               </ul>
+               </div>
+               <div class="shop ">
+                 <ul class="navbar-nav d-flex">
+                 <li class="nav-item px-5">
+                   <button type="button" class="btn btn-primary btn-sm px-4 rounded-pill">Shop now</button>
+                 </li>
+                 <li class="nav-item">
+                   <img src="./image/shopping-cart.svg" alt="">
+                   </li>
+                 </ul>
+                </div>
+         </div>
+         
         </div>
-        <div class="col-4 row shopCart">
-            <div class="col-2 shopTags">Shop Tags</div>
-            <i class="col-2 fal fa-shopping-cart"></i>
-        </div>
-    </div>
+             
+      </nav>
 
     <div class="row firstMain">
         <div class="col-5 firstLeft">
@@ -37,14 +66,14 @@
             <div class="secondTextFirst">Instanly Share Anything.</div>
             <div class="thirdTextFirst">Fully customizable design</div>
             <div class="forthTextFirst">Starting at $ 25</div>
-            <div class="fifthTextFirst">Shop Now</div>
+            <button type="button" class="btn btn-warning rounded-pill text-white px-4">Shop Now</button>
         </div>
         <img src="image/Image.png" alt="" class="col-7 image">
     </div>
 
     <div class="secondMain">
         <div class="firstTextSecond">Funky Designs. <span style="font-weight: 350;">Freah Tech</span></div>
-        <div class="secondTextSecond">Shop Now</div>
+        <button type="button" class="btn btn-primary btn-sm px-4 rounded-pill">Shop now</button>
         <img src="image/Polygon 3.svg" alt="" class="ploygon1">
         <img src="image/Polygon.svg" alt="" class="ploygon2">
         <img src="image/DESIGN 2.svg" alt="" class="design2">
