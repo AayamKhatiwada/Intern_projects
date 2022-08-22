@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.qsLogo,
+.menu {
+    width: 86.94px;
+    height: 60.09px;
+    padding: 10px;
+}
+
+.rightBackground {
+    width: -webkit-fill-available;
+}
+
+.header2 {
+    margin-top: 70px !important;
+}
+
+.header2Text {
+    padding: 50px 0 0 200px !important;
+}
+
+.qodeSocial {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 80px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.descQodeSocial {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 50px;
+}
+
+.penIcon {
+    margin-left: 30px;
+}
+
+.imgHand {
+    margin-top: -500px;
+}
+
+.socialBadges {
+    padding: 100px 0 50px 250px;
+}
+
+.socialBadge {
+    width: 200px !important;
+}
+
+.iconRow {
+    margin-bottom: 100px;
+}
+
+.headAboutUs {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 54px;
+    text-transform: uppercase;
+    width: 500px;
+}
+
+.descAboutUs {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 37px;
+    margin: 20px 0 50px 0;
+    width: 400px;
+}
+
+.leftBackground {
+    width: 850px;
+}
+
+.imgAboutUs {
+    margin-top: -450px;
+    margin-left: 100px;
+}
+
+.textServices{
+    padding: 200px !important;
+}
+
+.textAboutUs {
+    padding-left: 150px;
+}
+
+.descServices {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 37px;
+    margin-bottom: 30px;
+}
+
+.imgServices{
+    width: 500px !important;
+}
