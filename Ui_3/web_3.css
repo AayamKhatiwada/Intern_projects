@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     width: fit-content;
 }
@@ -17,9 +17,6 @@ body {
     font-weight: 750;
     font-size: 18px;
     line-height: 22px;
-    /* identical to box height */
-
-
     color: #E1A532;
 }
 
@@ -29,7 +26,6 @@ body {
     font-weight: 750;
     font-size: 48px;
     line-height: 62px;
-    /* or 129% */
 
 
     color: #000000;
@@ -43,7 +39,6 @@ body {
     font-size: 24px;
     line-height: 29px;
     margin: 10px 0;
-    /* identical to box height */
 
 
     color: #000000;
@@ -56,7 +51,6 @@ body {
     font-size: 24px;
     line-height: 29px;
     margin: 10px 0 40px 0;
-    /* identical to box height */
 
 
     color: #000000;
@@ -70,7 +64,6 @@ body {
 .secondMain {
     position: relative;
     background: #e6f4ff;
-    /* opacity: 0.1; */
     padding: 70px 50px;
 
 }
@@ -161,7 +154,6 @@ body {
     font-weight: 750;
     font-size: 14px;
     line-height: 17px;
-    /* identical to box height */
     padding: 10px 20px;
     margin: 20px 110px;
     align-items: center;
@@ -185,7 +177,6 @@ body {
     font-weight: 750;
     font-size: 24px;
     line-height: 29px;
-    /* identical to box height */
 
     text-align: center;
     margin: 20px 0 5px 0;
@@ -198,7 +189,6 @@ body {
     font-weight: 350;
     font-size: 18px;
     line-height: 22px;
-    /* identical to box height */
 
     text-align: center;
 
@@ -242,7 +232,6 @@ body {
     font-weight: 750;
     font-size: 18px;
     line-height: 22px;
-    /* identical to box height */
 
 
     color: #046DC4;
@@ -265,7 +254,6 @@ body {
     font-weight: 350;
     font-size: 14px;
     line-height: 22px;
-    /* or 157% */
     margin-right: 100px;
 
     color: #000000;
@@ -283,7 +271,6 @@ body {
     font-weight: 750;
     font-size: 14px;
     line-height: 17px;
-    /* identical to box height */
     margin: 70px 70% 0 0;
     align-items: center;
     text-align: center;
@@ -315,7 +302,6 @@ body {
     font-weight: 350;
     font-size: 14px;
     line-height: 22px;
-    /* or 157% */
     width: 800px;
     margin-left: 25%;
     text-align: center;
@@ -337,7 +323,6 @@ body {
     font-weight: 750;
     font-size: 14px;
     line-height: 17px;
-    /* identical to box height */
 
     display: flex;
     align-items: center;
@@ -355,10 +340,6 @@ body {
     font-style: normal;
     font-weight: 350;
     font-size: 24px;
-    line-height: 26px;
-    /* identical to box height, or 108% */
-
-
     color: #000000;
 }
 
@@ -372,7 +353,7 @@ body {
     font-weight: 350;
     font-size: 18px;
     line-height: 42px;
-    /* or 233% */
+
 
     text-decoration-line: underline;
 
@@ -385,7 +366,6 @@ body {
     font-weight: 350;
     font-size: 24px;
     line-height: 26px;
-    /* identical to box height, or 108% */
 
 
     color: #000000;
@@ -397,7 +377,6 @@ body {
     font-weight: 350;
     font-size: 14px;
     line-height: 26px;
-    /* or 186% */
     margin-top: 100px;
     color: #555555;
 }
@@ -408,7 +387,6 @@ body {
     font-weight: 350;
     font-size: 24px;
     line-height: 26px;
-    /* identical to box height, or 108% */
 
 
     color: #000000;
@@ -469,11 +447,10 @@ body {
     font-weight: 750;
     font-size: 14px;
     line-height: 17px;
-    /* identical to box height */
     padding: 10px 30px;
     display: flex;
     align-items: center;
     text-align: center;
     color: #FFFFFF;
     margin-left: 60%;
-}
+} */
