@@ -9,24 +9,12 @@ body {
 }
 
 .title {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px 0;
     border-bottom: 1px solid rgb(194, 194, 194);
 }
 
-.title1 {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.title2 {
-    width: 100%;
-}
-
-.navBar {
+.nav-bar {
     font-family: 'Playfair Display', serif;
     display: flex;
     flex-direction: row;
@@ -34,25 +22,24 @@ body {
 }
 
 .items {
-    margin: 25px 30px 25px 30px;
-    padding-bottom: 2px;
+    margin: 25px 50px;
+    padding-bottom: 3px;
     font-family: 'Playfair Display';
-    font-style: normal;
     font-weight: 600;
     font-size: 18px;
 }
 
-.familyLaw {
+.family-law {
     background-color: #EED1C773;
-    padding: 25px 20px 20px 20px;
+    padding: 40px;
 }
 
-.familyImage {
-    width: 1200px;
-    height: 550px;
+.family-image {
+    width: 100%;
+    height: auto;
 }
 
-.titlefamily {
+.title-family {
     font-family: 'Playfair Display', serif;
     font-size: 68px;
     font-weight: 600;
@@ -62,28 +49,24 @@ body {
     color: #D4410E;
     display: flex;
     flex-direction: row;
-    margin: 45px 0 35px 0;
+    margin: 25px 0;
 }
 
-.text {
-    width: 0 10px 0 10px;
+.title-family .text {
+    width: 100%;
 }
 
 .line {
-    width: 33%;
+    width: 50%;
 }
 
-.descFamily {
-    width: 70%;
-    margin-left: 17%;
-    margin-bottom: 50px;
+.desc-family {
+    margin: 50px 25%;
     font-family: PT Serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 32px;
     letter-spacing: 0em;
-    text-align: center;
-
 }
 
 .lawyers {
@@ -91,8 +74,8 @@ body {
     margin: 60px;
 }
 
-.lawyersHead {
-    flex: 1;
+.lawyers-head {
+    width: 40%;
     font-family: 'Playfair Display', serif;
     font-size: 42px;
     font-weight: 400;
@@ -101,14 +84,14 @@ body {
     text-align: left;
 }
 
-.descLawyer {
-    flex: 2.5;
+.desc-lawyer {
+    width: 60%;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
     text-align: left;
-    margin-left: 30px;
+    margin-left: 60px;
 }
 
 .services {
@@ -116,7 +99,7 @@ body {
     padding: 30px 0 60px 0;
 }
 
-.servicesHead {
+.services-head {
     display: flex;
 }
 
@@ -128,54 +111,55 @@ body {
     margin-top: 25px;
 }
 
-.servicesText {
+.services-text {
     width: 200%;
     font-family: 'Playfair Display', serif;
     font-size: 32px;
     font-weight: 400;
     line-height: 58px;
     letter-spacing: 0em;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
-.descServices {
+.desc-services {
     width: 50%;
-    margin-left: 25%;
+    margin: 20px 25%;
     font-family: 'PT Serif';
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0em;
-    text-align: center;
 }
 
-.helpHead {
+.help-head {
     font-family: 'Playfair Display', serif;
     font-size: 42px;
     font-weight: 400;
     line-height: 58px;
     letter-spacing: 0em;
-    text-align: center;
 }
 
 .help {
-    padding: 30px 0 30px 10px;
+    padding: 100px;
 }
 
 .boxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 40px;
+    margin: 40px;
 }
 
 .box {
-    width: 300px;
-    padding: 50px;
+    width: 400px;
+    padding: 40px;
 }
 
-.boxHead {
+.vec1 {
+    width: 35%;
+    height: 40%;
+}
+
+.box-head {
     font-family: PT Serif;
     font-size: 18px;
     font-weight: 700;
@@ -186,7 +170,7 @@ body {
 
 }
 
-.descBox {
+.desc-box {
     font-family: PT Serif;
     font-size: 16px;
     font-weight: 400;
@@ -209,7 +193,7 @@ body {
     margin-right: 10px;
 }
 
-.descFooter {
+.desc-footer {
     font-family: PT Serif;
     font-size: 16px;
     font-weight: 400;
@@ -220,225 +204,141 @@ body {
     color: #606060;
 }
 
+.title1 {
+    padding: 5px;
+    width: 250px;
+}
 
-@media screen and (max-width: 1024px) {
-    .title1{
-        width: 300px !important;
+.title2{
+    width: 300px;
+}
+
+
+@media screen and (max-width: 1440px) {
+    .items{
+        font-size: 18px;
+        margin: 30px 40px;
     }
 
-    .title2{
-        width: 400px !important;
+    .title {
+        padding: 30px 0;
+    }
+
+    .title2 {
+        width: 300px;
     }
 
     .items {
         font-weight: 600;
-        font-size: 23px;
+        font-size: 20px;
     }
 
-    .titlefamily {
-        font-size: 73px;
-        font-weight: 700;
+    .family-law {
+        padding: 40px;
     }
 
-    .descFamily {
-        font-size: 23px;
-        font-weight: 450;
+    .title-family {
+        font-size: 78px;
+        font-weight: 600;
     }
 
-    .lawyersHead {
-        font-size: 47px;
-        font-weight: 450;
-    }
-
-    .descLawyer {
-        font-size: 21px;
-    }
-
-    .servicesText {
-        font-size: 37px;
-        font-weight: 450;
-    }
-
-    .descServices {
-        font-size: 21px;
-        font-weight: 450;
-    }
-
-    .helpHead {
-        font-size: 47px;
-        font-weight: 450;
-    }
-
-    .boxHead {
-        font-size: 23px;
-        font-weight: 750;
-    }
-
-    .descBox {
-        font-size: 21px;
+    .desc-family {
+        font-size: 20px;
         font-weight: 400;
     }
 
-    .descFooter {
-        font-size: 21px;
-        font-weight: 450;
+    .lawyers-head {
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 58px;
     }
 
-    .line {
-        width: 33%;
+    .desc-lawyer {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        margin-left: 60px;
     }
 
-}
-
-
-@media screen and (max-width: 768px) {
-
-    .title1{
-        width: 400px !important;
+    .services-text {
+        width: 200%;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 58px;
+        letter-spacing: 0em;
     }
 
-    .title2{
-        width: 500px !important;
+    .desc-services {
+        width: 50%;
+        margin: 20px 25%;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
     }
 
-
-    .items {
-        font-weight: 600;
-        font-size: 28px;
-    }
-
-    .titlefamily {
-        font-size: 83px;
-        font-weight: 800;
-    }
-
-    .descFamily {
-        font-size: 33px;
-        font-weight: 500;
-        line-height: 42px;
-    }
-
-    .lawyersHead {
-        font-size: 57px;
-        font-weight: 500;
-        line-height: 68px;
-    }
-
-    .descLawyer {
-        font-size: 31px;
-        line-height: 38px;
-    }
-
-    .servicesText {
+    .help-head {
         font-size: 47px;
-        font-weight: 500;
+        font-weight: 400;
+        line-height: 58px;
+        letter-spacing: 0em;
     }
 
-    .descServices {
-        font-size: 31px;
-        font-weight: 500;
-        line-height: 38px;
+    .vec1 {
+        width: 37%;
+        height: 37%;
     }
 
-    .helpHead {
-        font-size: 57px;
-        font-weight: 500;
+    .box{
+        width: 300px;
     }
 
-    .boxHead {
-        font-size: 33px;
-        font-weight: 800;
-        line-height: 45px;
+    .box-head {
+        font-size: 25px;
+        line-height: 32px;
     }
 
-    .descBox {
-        font-size: 31px;
-        font-weight: 450;
-        line-height: 38px;
+    .desc-box {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
     }
 
-    .descFooter {
-        font-size: 31px;
-        font-weight: 500;
+    .desc-footer {
+        font-size: 18px;
     }
 
-    .line {
-        width: 25%;
-    }
-
-    .box {
-        width: 350px;
+    .title1 {
+        padding: 20px;
+        width: 300px;
     }
 }
 
-@media screen and (max-width: 425px) {
-    .items {
-        font-weight: 650;
-        font-size: 33px;
+
+@media screen and (max-width: 1024px) {
+    .items{
+        font-size: 18px;
+        margin: 25px 35px;
     }
 
-    .titlefamily {
-        font-size: 88px;
-        font-weight: 850;
+    .box{
+        width: 290px;
     }
 
-    .descFamily {
-        font-size: 43px;
-        font-weight: 500;
-        line-height: 55px;
-    }
-
-    .lawyersHead {
-        font-size: 62px;
-        font-weight: 550;
-        line-height: 80px;
-    }
-
-    .descLawyer {
-        font-size: 41px;
-        line-height: 55px;
-    }
-
-    .servicesText {
-        font-size: 52px;
-        font-weight: 550;
-        line-height: 70px;
-    }
-
-    .descServices {
-        font-size: 41px;
-        font-weight: 500;
-        line-height: 55px;
-    }
-
-    .helpHead {
-        font-size: 62px;
-        font-weight: 500;
-    }
-
-    .boxHead {
-        font-size: 38px;
-        font-weight: 800;
-        line-height: 50px;
-    }
-
-    .descBox {
-        font-size: 41px;
-        font-weight: 450;
-        line-height: 50px;
-    }
-
-    .descFooter {
-        font-size: 41px;
-        font-weight: 500;
-        line-height: 70px;
-    }
-
-    .box {
-        width: 550px;
-    }
-    
     .vec1{
-        width: 200px;
+        width: 33%;
+        height: 32%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .items{
+        font-size: 18px;
+        margin: 20px 25px;
+    }
+
+    .line{
+        width: 30%;
     }
 }
