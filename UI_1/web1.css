@@ -1,380 +1,237 @@
-.main {
-    background-color: #A7D1EF;
+body {
+    margin: 0;
+    background: #A7D1EF;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
 }
 
-.leftSide {
-    flex: 2;
-    margin: 230px 20px 20px 100px;
+.left-side {
+    width: 100%;
+    padding: 150px 30px 30px 150px;
 }
 
-.rightSide {
-    flex: 3;
-    align-self: stretch;
+.right-side{
+    width: 120%;
 }
 
-.image1 {
-    position: absolute;
-    width: 780px;
-    height: 850px;
-    margin-top: 53px;
-}
-
-.image2 {
-    position: absolute;
-    width: 1033px;
-    height: 880px;
-    margin: 22px 0 0 0;
-}
-
-.thankYou {
+.thank-you {
+    font-family: 'Bebas Neue';
     font-style: normal;
-    font-weight: 450;
-    font-size: 130px;
-    line-height: 73px;
-    margin-bottom: 70px;
+    font-weight: 400;
+    font-size: 110px;
+    line-height: 68px;
     color: #353B7D;
+    padding: 50px 0;
+}
+
+.second-head {
     font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 68px;
+    color: #FFFFFF;
+    width: 40%;
 }
 
-.secondHead {
-    font-size: 60px;
-    margin-bottom: 50px;
-    color: white;
-    width: 280px;
+.text {
     font-family: 'Bebas Neue';
-    line-height: 105%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    align-items: center;
+    color: #FFFFFF;
+    width: 50%;
+    padding: 60px 0;
 }
 
-.firstDesc {
-    font-size: 23px;
-    color: white;
-    width: 450px;
-    margin-bottom: 30px;
+.first-desc{
+    margin: 20px 0;
 }
 
-.secondDesc {
-    font-size: 23px;
-    color: white;
-    
-}
-
-.link {
+.link{
     color: #353B7D;
-    font-size: 23px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .image3{
+    margin: -20px 5px 0 5px;
     position: absolute;
-    margin-top: -13px;
-    margin-left: 15px;
-    width: 40px;
-    height: 40px;
+}
+
+.image{
+    float: right;
+    padding-top: 5px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+    .left-side {
+        padding: 80px 30px 25px 150px;
+    }
+    
+    .thank-you {
+        font-weight: 400;
+        font-size: 90px;
+        line-height: 68px;
+        padding: 40px 0;
+    }
+    
+    .second-head {
+        font-weight: 400;
+        font-size: 52px;
+        line-height: 60px;
+        width: 50%;
+    }
+    
+    .text {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 30px;
+        width: 50%;
+        padding: 30px 0;
+    }
+
+    .image3{
+        margin: -5px 5px 0 5px;
+        width: 40px;
+    }
+    
+    .image{
+        width: 100%;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
 }
 
 
-@media screen and (max-width: 1269px) { 
-    .leftSide {
-        margin: 150px 10px 10px 90px;
-    }
-
-    .image1 {
-        width: 623px;
-        height: 625px;
-        margin-top: 15px;
+@media screen and (max-width: 1024px) {
+    .left-side {
+        padding: 80px 30px 30px 100px;
     }
     
-    .image2 {
-        width: 690px;
-        height: 600px;
-        margin: 39px 0 0 10px;
-    }
-    
-    .thankYou {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 100px;
+    .thank-you {
+        font-weight: 300;
+        font-size: 90px;
         line-height: 68px;
-        margin-bottom: 45px;
+        padding: 50px 0;
     }
     
-    .secondHead {
-        font-size: 50px;
-        margin-bottom: 40px;
-        width: 250px;
-        line-height: 100%;
+    .second-head {
+        font-weight: 300;
+        font-size: 52px;
+        line-height: 60px;
+        width: 80%;
     }
     
-    .firstDesc {
-        font-size: 18px;
-        width: 300px;
-        margin-bottom: 20px;
-    }
-    
-    .secondDesc {
-        font-size: 18px;      
-    }
-    
-    .link {
-        font-size: 15px;
-    }
-    
-    .image3{
-        margin-top: -3px;
-        margin-left: 5px;
-        width: 30px;
-        height: 30px;
-    }
-    
- }
-
-@media screen and (max-width: 1024px) { 
-    .leftSide {
-        margin: 80px 0 10px 90px;
-    }
-    
-    .image1 {
-        width: 490px;
-        height: 460px;
-        margin-top: 15px;
-    }
-    
-    .image2 {
-        width: 515px;
-        height: 436px;
-        margin: 39px 0 0 10px;
-    }
-    
-    .thankYou {
-        font-style: normal;
+    .text {
         font-weight: 400;
-        font-size: 80px;
-        line-height: 90px;
-        margin-bottom: 45px;
+        font-size: 22px;
+        line-height: 30px;
+        width: 50%;
+        padding: 20px 0;
     }
-    
-    .secondHead {
-        font-size: 40px;
-        margin-bottom: 40px;
-        width: 250px;
-        font-family: 'Bebas Neue';
-        line-height: 100%;
-    }
-    
-    .firstDesc {
-        font-size: 16px;
-        width: 300px;
-        margin-bottom: 20px;
-    }
-    
-    .secondDesc {
-        width: 400px;
-        font-size: 16px;
-    }
-    
-    .link {
-        font-size: 15px;
-    }
-    
-    .image3{
-        margin-top: -3px;
-        margin-left: 5px;
-        width: 30px;
-        height: 30px;
-    }
-    
- }
 
-   
-@media screen and (max-width: 768px) { 
-    .leftSide {
-        margin: 110px 0 10px 60px;
+    .image3{
+        margin: -5px 5px 0 5px;
+        width: 40px;
     }
     
-    .image1 {
-        width: 540px;
-        height: 556px;
-        margin-top: 45px;
-        margin-left: -40px;
+    .image{
+        width: 120%;
+        margin-top: 135px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .left-side {
+        padding: 50px 30px 25px 100px;
     }
     
-    .image2 {
-        width: 490px;
-        height: 560px;
-        margin: 39px 0 0 10px;
+    .thank-you {
+        font-weight: 300;
+        font-size: 70px;
+        line-height: 68px;
+        padding: 20px 0;
     }
     
-    .thankYou {
-        font-style: normal;
+    .second-head {
+        font-weight: 300;
+        font-size: 35px;
+        line-height: 40px;
+        width: 80%;
+    }
+    
+    .text {
         font-weight: 400;
-        font-size: 100px;
-        line-height: 90px;
-        margin-bottom: 50px;
-    }
-    
-    .secondHead {
-        font-size: 55px;
-        margin-bottom: 40px;
-        width: 250px;
-        font-family: 'Bebas Neue';
-        line-height: 100%;
-    }
-    
-    .firstDesc {
         font-size: 20px;
-        width: 300px;
-        margin-bottom: 23px;
+        line-height: 30px;
+        width: 80%;
+        padding: 5px 0;
     }
-    
-    .secondDesc {
-        width: 400px;
-        font-size: 20px;
-    }
-    
-    .link {
-        font-size: 15px;
-    }
-    
+
     .image3{
-        margin-top: -3px;
-        margin-left: 5px;
-        width: 30px;
-        height: 30px;
-    }  
- }
+        margin: -5px 5px 0 5px;
+        width: 40px;
+    }
+    
+    .image{
+        width: 120%;
+        margin-top: 135px;
+    }
+}
 
-   
-@media screen and (max-width: 425px) { 
 
+@media screen and (max-width: 425px) {
     body{
-        padding: 20px;
+        flex-direction: column;
+    }
+
+    .left-side {
+        padding: 40px;
+        width: auto;
     }
     
-    .leftSide {
-        margin: 100px 20px 10px 20px;
+    .thank-you {
+        font-weight: 300;
+        font-size: 90px;
+        line-height: 75px;
+        padding: 50px 0;
     }
     
-    .image1 {
-        width: 640px;
-        height: 640px;
-        margin-top: 1040px;
-        margin-left: -650px;
+    .second-head {
+        font-weight: 300;
+        font-size: 52px;
+        line-height: 60px;
+        width: 100%;
     }
     
-    .image2 {
-        width: 810px;
-        height: 585px;
-        margin: 1100px 0 0 -800px;
+    .text {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 30px;
+        width: 100%;
+        padding: 20px 0;
     }
-    
-    .thankYou {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 200px;
-        line-height: 180px;
-        margin-bottom: 60px;
-        width: 1000px;
-    }
-    
-    .secondHead {
-        font-size: 100px;
-        margin-bottom: 40px;
-        width: 600px;
-        line-height: 120%;
-    }
-    
-    .firstDesc {
-        font-size: 50px;
-        width: 900px;
-        margin-bottom: 40px;
-    }
-    
-    .secondDesc {
-        width: 1000px;
-        font-size: 50px;
-    }
-    
-    .link {
-        font-size: 40px;
-    }
-    
+
     .image3{
-        margin-top: -3px;
-        margin-left: 5px;
-        width: 30px;
-        height: 30px;
-    }  
- }
+        margin: -5px 5px 0 5px;
+        width: 40px;
+    }
 
-
-
-/* @media screen and (max-width: 2560px) {  
-    .leftSide {
-        margin: 250px 0 90px 220px;
+    .right-side{
+        width: 100%;
     }
     
-    .rightSide {
-        flex: 3;
-        align-self: stretch;
+    .image{
+        width: 100%;
+        margin-top: 0px;
     }
-    
-    .image1 {
-        position: absolute;
-        width: 1000px;
-        height: 1068px;
-        margin: 64px 0 0 220px;
-    }
-    
-    .image2 {
-        position: absolute;
-        width: 1300px;
-        height: 1000px;
-        margin: 130px 0 0 100px;
-    }
-    
-    .thankYou {
-        font-style: normal;
-        font-weight: 800;
-        font-size: 200px;
-        line-height: 200px;
-        margin-bottom: 60px;
-        color: #353B7D;
-        font-family: 'Bebas Neue';
-    }
-    
-    .secondHead {
-        font-size: 100px;
-        margin-bottom: 40px;
-        color: white;
-        width: 500px;
-        font-family: 'Bebas Neue';
-        line-height: 120%;
-    }
-    
-    .firstDesc {
-        font-size: 30px;
-        color: white;
-        width: 600px;
-        margin-bottom: 20px;
-    }
-    
-    .secondDesc {
-        font-size: 30px;
-        color: white;
-    }
-    
-    .link {
-        color: #353B7D;
-        font-size: 30px;
-    }
-    
-    .image3{
-        position: absolute;
-        margin-top: -10px;
-        margin-left: 10px;
-        width: 60px;
-        height: 60px;
-    }
-  } */
+}
