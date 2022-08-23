@@ -361,16 +361,11 @@ body {
         flex-direction: column;
     }
 
-
     .items{
         font-size: 18px;
         margin: 20px 25px;
     }
 
-    .line{
-        width: 30%;
-    }
-    
     .title2 {
         width: 250px;
     }
@@ -398,6 +393,70 @@ body {
 
     .lawyers-head{
         width: 100%;
+        font-size: 35px;
+    }
 
+    .desc-lawyer{
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .services-text{
+        font-size: 35px;
+    }
+
+    .desc-services{
+        font-size: 16px;
+    }
+
+    .help-head{
+        font-size: 35px;
+    }
+
+    .help{
+        padding: 30px;
+    }
+
+    .vec1 {
+        width: 50%;
+        height: 35%;
+    }
+
+    .boxes{
+        margin: 40px 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .line{
+        width: 5%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .text{
+        font-size: 40px;
+    }
+
+    .family-law{
+        padding: 20px;
+    }
+
+    .footer .title1{
+        padding: 0;
+    }
+
+    .lawyers{
+        margin: 20px;
+    }
+
+    .desc-services{
+        width: 80%;
+        margin: 20px 10%;
+    }
+
+    .box{
+        padding: 20px;
+        margin-bottom: 30px;
     }
 }
