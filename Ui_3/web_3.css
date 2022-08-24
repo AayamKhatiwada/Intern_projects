@@ -1,5 +1,80 @@
 .background-image{
-    height: 500px;
+    height: 600px;
+    width: 100%;
     background: rgba(0, 0, 0, 0.6);
-    
+}
+
+.phone-image{
+    width: 600px;
+    z-index: -1;
+}
+
+.phone-text{
+    z-index: 2;
+}
+
+.button-text{
+    font-size: 14px;
+}
+
+.card{
+    padding: 30px;
+    border: none;
+    text-align: center;
+}
+
+.img-one{
+    padding: 0 !important;
+    object-fit: cover;
+}
+
+.picture-text-box{
+    padding: 6rem;
+}
+
+.sixth-main{
+    background: #EAC070;
+}
+
+.sixth-main-text{
+    width: 65%;
+}
+
+.polygon{
+    margin-top: -200px;
+    right: 50px;
+    z-index: 3;
+}
+
+.footer{
+    padding: 7rem;
+    padding-bottom: 0;
+    background: #F5F5F5;
+}
+
+@media screen and (max-width: 1024px) {
+    h1{
+        /* original pixel: 42px */
+        font-size: 35px;
+    }
+
+    h2{
+        /* original pixel: 35px */
+        font-size: 28px;
+    }
+
+    h3{
+        /* original pixel: 32px */
+        font-size: 25px;
+    }
+
+    h4{
+        /* original pixel: 28px */
+        font-size: 21px;
+    }
+
+    h5{
+        /* original pixel: 25px */
+        font-size: 18px;
+    }
 }
