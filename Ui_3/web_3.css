@@ -52,6 +52,56 @@
     background: #F5F5F5;
 }
 
+@media screen and (max-width: 1440px) {
+    h1{
+        /* original pixel: 42px */
+        font-size: 39px;
+    }
+
+    h2{
+        /* original pixel: 35px */
+        font-size: 33px;
+    }
+
+    h3{
+        /* original pixel: 32px */
+        font-size: 29px;
+    }
+
+    h4{
+        /* original pixel: 28px */
+        font-size: 25px;
+    }
+
+    h5{
+        /* original pixel: 25px */
+        font-size: 22px;
+    }
+
+    .nav-item{
+        font-size: 19px;
+    }
+
+    .main-cards{
+        padding: 2.5rem !important;
+        margin: 2.5rem !important;
+    }
+
+    .card-desc{
+        /* original pixel: 20px */
+        font-size: 19px;
+    }
+
+    .desc{
+        /* original pixel: 20px */
+        font-size: 19px;
+    }
+
+    .picture-text-box {
+        padding: 5rem;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     h1{
         /* original pixel: 42px */
@@ -77,4 +127,100 @@
         /* original pixel: 25px */
         font-size: 18px;
     }
+
+    .main-cards{
+        padding: 2rem !important;
+        margin: 2rem !important;
+    }
+
+    .desc{
+        /* original pixel: 20px */
+        font-size: 18px;
+    }
+
+    .picture-text-box {
+        padding: 4rem;
+    }
+
+    .card{
+        width: 50%;
+    }
+
+    .nav-item{
+        font-size: 16px;
+    }
+
+    a{
+        padding: 0;
+    }
+
+    .polygon{
+        width: 40%;
+    }
+
+    .footer{
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1{
+        /* original pixel: 42px */
+        font-size: 35px;
+    }
+
+    h2{
+        /* original pixel: 35px */
+        font-size: 28px;
+    }
+
+    h3{
+        /* original pixel: 32px */
+        font-size: 25px;
+    }
+
+    h4{
+        /* original pixel: 28px */
+        font-size: 21px;
+    }
+
+    h5{
+        /* original pixel: 25px */
+        font-size: 18px;
+    }
+
+    .main-cards{
+        padding: 2rem !important;
+        margin: 2rem !important;
+    }
+
+    .desc{
+        /* original pixel: 20px */
+        font-size: 18px;
+    }
+
+    .picture-text-box {
+        padding: 4rem;
+    }
+
+    .card{
+        width: 30%;
+    }
+
+    .nav-item{
+        font-size: 16px;
+    }
+
+    a{
+        padding: 0;
+    }
+
+    .polygon{
+        width: 40%;
+    }
+
+    .border-margin{
+        margin: 0 40%;
+    }
+
 }
