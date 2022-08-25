@@ -1,98 +1,82 @@
-.background-image{
-    height: 600px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-}
-
-.phone-image{
-    width: 600px;
-    z-index: -1;
-}
-
-.phone-text{
-    z-index: 2;
-}
-
-.button-text{
+.button-text {
     font-size: 14px;
 }
 
-.card{
+.card {
     padding: 30px;
     border: none;
     text-align: center;
 }
 
-.img-one{
-    padding: 0 !important;
-    object-fit: cover;
+.business-card {
+    height: 700px;
+    background: rgba(0, 0, 0, 0.6);
 }
 
-.picture-text-box{
+.picture-text-box {
     padding: 6rem;
 }
 
-.sixth-main{
-    background: #EAC070;
-}
-
-.sixth-main-text{
+.sixth-main-text {
     width: 65%;
 }
 
-.polygon{
+.image-absolute {
+    width: 700px;
+}
+
+.polygon {
     margin-top: -200px;
     right: 50px;
     z-index: 3;
 }
 
-.footer{
+.footer {
     padding: 7rem;
     padding-bottom: 0;
-    background: #F5F5F5;
 }
 
 @media screen and (max-width: 1440px) {
-    h1{
+    h1 {
         /* original pixel: 42px */
         font-size: 39px;
     }
 
-    h2{
+    h2 {
         /* original pixel: 35px */
         font-size: 33px;
     }
 
-    h3{
+    h3 {
         /* original pixel: 32px */
         font-size: 29px;
     }
 
-    h4{
+    h4 {
         /* original pixel: 28px */
         font-size: 25px;
     }
 
-    h5{
+    h5 {
         /* original pixel: 25px */
         font-size: 22px;
     }
 
-    .nav-item{
+    .nav-item {
         font-size: 19px;
     }
 
-    .main-cards{
+    .main-cards {
         padding: 2.5rem !important;
         margin: 2.5rem !important;
     }
 
-    .card-desc{
+    .card-desc {
         /* original pixel: 20px */
         font-size: 19px;
     }
 
-    .desc{
+    .desc {
         /* original pixel: 20px */
         font-size: 19px;
     }
@@ -103,124 +87,147 @@
 }
 
 @media screen and (max-width: 1024px) {
-    h1{
+    h1 {
         /* original pixel: 42px */
         font-size: 35px;
     }
 
-    h2{
+    h2 {
         /* original pixel: 35px */
         font-size: 28px;
     }
 
-    h3{
+    h3 {
         /* original pixel: 32px */
         font-size: 25px;
     }
 
-    h4{
+    h4 {
         /* original pixel: 28px */
         font-size: 21px;
     }
 
-    h5{
+    h5 {
         /* original pixel: 25px */
         font-size: 18px;
     }
 
-    .main-cards{
+    .main-cards {
         padding: 2rem !important;
         margin: 2rem !important;
     }
 
-    .desc{
+    .desc {
         /* original pixel: 20px */
         font-size: 18px;
     }
 
     .picture-text-box {
-        padding: 4rem;
+        padding: 4rem !important;
     }
 
-    .card{
+    .sixth-main-text {
+        width: 90%;
+    }
+
+    .card {
         width: 50%;
     }
 
-    .nav-item{
+    .nav-item {
         font-size: 16px;
     }
 
-    a{
+    a {
         padding: 0;
     }
 
-    .polygon{
+    .polygon {
         width: 40%;
     }
 
-    .footer{
+    .footer {
         padding: 2rem;
     }
 }
 
 @media screen and (max-width: 768px) {
-    h1{
-        /* original pixel: 42px */
-        font-size: 35px;
-    }
-
-    h2{
-        /* original pixel: 35px */
-        font-size: 28px;
-    }
-
-    h3{
-        /* original pixel: 32px */
-        font-size: 25px;
-    }
-
-    h4{
-        /* original pixel: 28px */
-        font-size: 21px;
-    }
-
-    h5{
-        /* original pixel: 25px */
-        font-size: 18px;
-    }
-
-    .main-cards{
+    .picture-text-box {
         padding: 2rem !important;
-        margin: 2rem !important;
     }
 
-    .desc{
+    .polygon {
+        width: 30%;
+    }
+
+    .nav-border-margin {
+        margin: 0 40%;
+    }
+
+    .business-card{
+        height: 450px;
+    }
+
+    .image-absolute {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .first-main{
+        flex-direction: column !important;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    .main-cards {
+        padding: 1rem !important;
+        margin: 1rem !important;
+    }
+
+    .desc {
         /* original pixel: 20px */
         font-size: 18px;
     }
 
     .picture-text-box {
-        padding: 4rem;
+        padding: 2rem !important;
+        text-align: center !important;
     }
 
-    .card{
-        width: 30%;
+    .sixth-main-text {
+        width: 100%;
     }
 
-    .nav-item{
+    .card {
+        width: 100%;
+    }
+
+    .nav-item {
         font-size: 16px;
     }
 
-    a{
+    .image-absolute {
+        width: 300px;
+    }
+
+    a {
         padding: 0;
     }
 
-    .polygon{
-        width: 40%;
+    .nav-border-margin {
+        margin: 0 35%;
     }
 
-    .border-margin{
-        margin: 0 40%;
+    .polygon {
+        margin-top: -70px;
+        right: 0px;
+        width: 30%;
     }
 
+    .footer {
+        padding: 2rem;
+    }
 }
