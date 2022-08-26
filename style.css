@@ -1,0 +1,281 @@
+*{
+    font-family: 'Comfortaa';
+    font-style: normal;
+}
+
+.qode-social, .social-media, .case-study-head, .brand-head, .plan-head, .accolades-head, .marketing-head, .send-message-head{
+    text-transform: uppercase;
+}
+
+.qslogo-image, .menu-image {
+    width: 120px !important;
+}
+
+.qode-social {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 80px;
+}
+
+.desc-qode-social {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.large-button {
+    width: 40% !important;
+}
+
+.small-button {
+    width: 25% !important;
+}
+
+.social-media {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 54px;
+}
+
+.full-services {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 37px;
+}
+
+.desc-services {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 37px;
+}
+
+.case-study-head {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 54px;
+    text-align: end;
+    margin-right: 5%;
+}
+
+.case-study-image {
+    z-index: -1;
+    margin-top: -16.5%;
+    width: 75%;
+}
+
+.quotation-mark {
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 25px;
+}
+
+.quotation-mark-desc {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 42px;
+}
+
+.quotation-mark-head {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+}
+
+.quotation-mark-head-desc {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 40px;
+    letter-spacing: 0em;
+}
+
+.brand-head {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 54px;
+}
+
+.plan-head {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 54px;
+}
+
+.plan-desc {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 37px;
+}
+
+.accolades-head {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 54px;
+}
+
+.marketing-head {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 54px;
+}
+
+.send-message-head {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 54px;
+}
+
+.send-message-desc {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 37px;
+}
+
+.qode-social-head {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+}
+
+.qode-social-term {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 45px;
+}
+
+.services-area-head {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.services-area-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.toronto-box{
+    padding: 4% 10%;
+}
+
+@media screen and (max-width: 1024px) {
+    .qslogo-image, .menu-image {
+        width: 100px !important;
+    }
+    
+    .qode-social {
+        font-size: 62px;
+        line-height: 70px;
+    }
+    
+    .desc-qode-social {
+        font-size: 31px;
+        line-height: 35px;
+    }
+    
+    .large-button {
+        width: 50% !important;
+    }
+    
+    .small-button {
+        width: 35% !important;
+    }
+    
+    .social-media {
+        font-size: 43px;
+        line-height: 49px;
+    }
+    
+    .full-services {
+        font-size: 22px;
+        line-height: 37px;
+    }
+    
+    .desc-services {
+        font-size: 22px;
+        line-height: 37px;
+    }
+    
+    .case-study-head {
+        font-size: 43px;
+        line-height: 49px;
+        margin-right: 5%;
+    }
+    
+    .quotation-mark {
+        font-size: 120px;
+    }
+    
+    .quotation-mark-desc {
+        font-size: 22px;
+        line-height: 40px;
+    }
+
+    .quotation-mark-head {
+        line-height: 35px;
+    }
+    
+    .quotation-mark-head-desc {
+        line-height: 35px;
+    }
+    
+    .brand-head {
+        font-size: 43px;
+        line-height: 49px;
+    }
+    
+    .plan-head {
+        font-size: 43px;
+        line-height: 49px;
+    }
+    
+    .plan-desc {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    
+    .accolades-head {
+        font-size: 43px;
+        line-height: 49px;
+    }
+    
+    .marketing-head {
+        font-size: 43px;
+        line-height: 49px;
+    }
+    
+    .send-message-head {
+        font-size: 43px;
+        line-height: 49px;
+    }
+    
+    .send-message-desc {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    
+    .qode-social-head {
+        font-size: 22px;
+        line-height: 25px;
+    }
+    
+    .qode-social-term {
+        font-size: 16px;
+        line-height: 45px;
+    }
+    
+    .services-area-head {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    
+    .services-area-desc {
+        font-size: 16px;
+        line-height: 32px;
+    }
+    
+    .toronto-box{
+        padding: 4% 10%;
+    }
+}
