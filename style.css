@@ -175,11 +175,11 @@
     }
     
     .large-button {
-        width: 50% !important;
+        width: 75% !important;
     }
     
     .small-button {
-        width: 35% !important;
+        width: 60% !important;
     }
     
     .social-media {
@@ -298,11 +298,11 @@
     }
 
     .large-button {
-        width: 70% !important;
+        width: 100% !important;
     }
 
     .small-button {
-        width: 50% !important;
+        width: 80% !important;
     }
 
     .social-media {
@@ -373,5 +373,11 @@
     .qode-social-head {
         font-size: 20px;
         line-height: 36px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .accolades-images .item{
+        width: 50%;
     }
 }
