@@ -155,6 +155,10 @@
     line-height: 32px;
 }
 
+.map-side-text{
+    width: 135%;
+}
+
 .toronto-box{
     padding: 4% 10%;
 }
@@ -379,5 +383,11 @@
 @media screen and (max-width: 610px) {
     .accolades-images .item{
         width: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .map-side-text{
+        width: 100%;
     }
 }
