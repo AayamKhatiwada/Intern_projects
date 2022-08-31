@@ -2,110 +2,31 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Database\RecordsNotFoundException;
-use Illuminate\Support\Facades\File;
-use Spatie\YamlFrontMatter\YamlFrontMatter;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-class Post
+class Post extends Model
 {
+    use HasFactory;
 
-    public $title;
+    // it guards properties to be unchangable while mass assigning
+    // protected $guarded = ['id'];
 
-    public $excerpt;
+    // it only allows the fillable to properties to be mass assigned
+    // protected $fillable = ['title', 'excerpt', 'body'];
 
-    public $date;
+    // It always include catagory and author during sql query
+    // protected $with = ['catagory','author']
 
-    public $body;
+    public function catagory(){
+        // realtions type :
+        // hasOne, hasMany, belongsTo, belongsToMany
 
-    public $slug;
-
-    public function __construct($title, $excerpt, $date, $body, $slug)
-    {
-        $this->title = $title;
-        $this->excerpt = $excerpt;
-        $this->date = $date;
-        $this->body = $body;
-        $this->slug = $slug;
+        return $this->belongsTo(Catagory::class);
     }
 
-
-    // function to reads all the files from the posts/ and returns contents
-    public static function all()
-    {
-
-        // // stores all the files in $files 
-        // $files = File::files(resource_path("posts/"));
-
-        // // returns contents of the files using array_map
-        // return array_map(function ($files){
-        //     return $files -> getContents();
-        // }, $files);
-
-        return cache()-> rememberForever('posts.all', function(){
-            return collect(File::files(resource_path("posts/")))
-                ->map(
-                    function ($file) {
-                        return YamlFrontMatter::parseFile($file);
-                    }
-                )
-    
-                ->map(
-                    function ($document) {
-                        return new Post(
-                            $document->title,
-                            $document->excerpt,
-                            $document->date,
-                            $document->body(),
-                            $document->slug,
-                        );
-                    }
-                )
-                -> sortByDesc('date');
-        });
+    public function author(){
+        return $this->belongsTo(User::class,'user_id');
     }
 
-
-    public static function find($slug)
-    {
-        // if (! file_exists($path = resource_path("posts/{$slug}.html"))){
-        // it dislays a simple one line erroe
-        // dd("file doesn't exist");
-
-        // it displays a detailed version aslo know as dump, die, debug
-        // ddd("File doesn't exst");
-
-        // we can also redirect to home page
-        // return redirect('/');
-
-        // Displays 404 not found
-        // abort(404);
-
-        // throws model not found exception
-        //     throw new RecordsNotFoundException();
-        // }
-
-        // we can also use now()-> addMinutes(20) or addDays() or ....... insted of 5 second
-        // file system
-        // caching
-        // return cache()-> remember("posts.($slug)", 5, fn() => file_get_contents($path));
-
-        // return view('post',['post' => $post]);
-
-        // from all the blog post, find the one with a slug that matches the one that was requested
-
-
-
-        return static::all()->firstWhere('slug', $slug);
-    }
-
-    public static function findOrFail($slug){
-
-        $post =  static::find($slug);
-        if(!$post){
-            throw new ModelNotFoundException();
-        }
-
-        return $post;
-    }
 }
