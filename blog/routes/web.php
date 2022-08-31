@@ -1,6 +1,10 @@
 <?php
 
+use App\Models\Catagory;
 use App\Models\Post;
+use App\Models\User;
+use Illuminate\Log\Logger;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 
@@ -45,20 +49,48 @@ Route::get('/', function () {
 
     // return Post::find('my-first-post');
 
-    // calls Post::all
+    // it listens all the mysql query and shows in storage/logs/laravel.log
+    // DB::listen(function ($query){
+    //     logger($query->sql, $query->bindings);
+    // });
+
+    // calls Post::all which is one of the function provided by collection
     return view('posts', [
-        'posts' => Post::all()
+
+        // we have to run sql query for every post
+        // 'posts' => Post::all()
+
+        // we just have to run sql query once to get all the posts
+        'posts' => Post::latest('created_at')->with('catagory','author')->get()
     ]);
 });
 
-Route::get('posts/{post}', function ($slug) {
+Route::get('posts/{post:slug}', function (Post $post) {
 
     // find a post by its slug and pass it to a view called "post"
     // $post = Post::find($slug);
 
     return view('post', [
-        'post' => Post::findOrFail($slug)
+        'post' => $post
     ]);
 });
 // ->where('post', '[A-z_/-]+'); 
 //constraints
+
+
+Route::get('catagories/{catagory:slug}', function (Catagory $catagory) {
+
+    // find a post by its slug and pass it to a view called "post"
+    // $post = Post::find($slug);
+
+    return view('posts', [
+        'posts' => $catagory->posts->load(['catagory','author'])
+    ]);
+});
+
+Route::get('authors/{author:userName}', function (User $author) {
+
+    return view('posts', [
+        'posts' => $author->posts->load(['catagory','author'])
+    ]);
+});
