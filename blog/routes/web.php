@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Models\Catagory;
 use App\Models\Post;
 use App\Models\User;
@@ -20,7 +21,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 // basic routings and views
-Route::get('/', function () {
+Route::get('/', 
+    // function () {
 
     // using collection to store data
 
@@ -54,27 +56,40 @@ Route::get('/', function () {
     //     logger($query->sql, $query->bindings);
     // });
 
-    // calls Post::all which is one of the function provided by collection
-    return view('posts', [
+    // $posts = Post::latest();
 
-        // we have to run sql query for every post
-        // 'posts' => Post::all()
+    // if (request('search')) {
+    //     $posts->where('title', 'like', '%'. request('search'). '%')
+    //     ->orWhere('body','like', '%'.request('search').'%');
+    // }
 
-        // we just have to run sql query once to get all the posts
-        'posts' => Post::latest('created_at')->with('catagory','author')->get(),
-        'catagories' => Catagory::all()
-    ]);
-})->name('home');  // naming the route 'home'
+    // // calls Post::all which is one of the function provided by collection
+    // return view('posts', [
 
-Route::get('posts/{post:slug}', function (Post $post) {
+    //     // we have to run sql query for every post
+    //     // 'posts' => Post::all()
 
-    // find a post by its slug and pass it to a view called "post"
-    // $post = Post::find($slug);
+    //     // we just have to run sql query once to get all the posts
+    //     'posts' => $posts->get(),
+    //     'catagories' => Catagory::all()
+    // ]);
+    // }
 
-    return view('post', [
-        'post' => $post
-    ]);
-});
+    [PostController::class,'index']
+)->name('home');  // naming the route 'home'
+
+Route::get('posts/{post:slug}', [PostController::class,'show']
+    
+//     function (Post $post) {
+
+//     // find a post by its slug and pass it to a view called "post"
+//     // $post = Post::find($slug);
+
+//     return view('post', [
+//         'post' => $post
+//     ]);
+// }
+);
 // ->where('post', '[A-z_/-]+'); 
 //constraints
 
@@ -85,8 +100,8 @@ Route::get('catagories/{catagory:slug}', function (Catagory $catagory) {
     // $post = Post::find($slug);
 
     return view('posts', [
-        'posts' => $catagory->posts->load(['catagory','author']),
-        'currentCatagory'=> $catagory,
+        'posts' => $catagory->posts->load(['catagory', 'author']),
+        'currentCatagory' => $catagory,
         'catagories' => Catagory::all()
     ]);
 })->name('catagory');  // naming the route catagory
@@ -94,7 +109,7 @@ Route::get('catagories/{catagory:slug}', function (Catagory $catagory) {
 Route::get('authors/{author:userName}', function (User $author) {
 
     return view('posts', [
-        'posts' => $author->posts->load(['catagory','author']),
+        'posts' => $author->posts->load(['catagory', 'author']),
         'catagories' => Catagory::all()
     ]);
 });

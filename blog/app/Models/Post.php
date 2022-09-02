@@ -18,15 +18,27 @@ class Post extends Model
     // It always include catagory and author during sql query
     // protected $with = ['catagory','author']
 
-    public function catagory(){
+    public function catagory()
+    {
         // realtions type :
         // hasOne, hasMany, belongsTo, belongsToMany
 
         return $this->belongsTo(Catagory::class);
     }
 
-    public function author(){
-        return $this->belongsTo(User::class,'user_id');
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 
+    public function scopeFilter($query, array $filters)
+    {  // Post::newQuery->filter()
+
+        $query->when(
+            $filters['search'] ?? false,
+            function ($query, $search) {
+                $query->where('title', 'like', '%' . $search . '%');
+            }
+        );
+    }
 }
