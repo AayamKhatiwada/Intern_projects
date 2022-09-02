@@ -61,9 +61,10 @@ Route::get('/', function () {
         // 'posts' => Post::all()
 
         // we just have to run sql query once to get all the posts
-        'posts' => Post::latest('created_at')->with('catagory','author')->get()
+        'posts' => Post::latest('created_at')->with('catagory','author')->get(),
+        'catagories' => Catagory::all()
     ]);
-});
+})->name('home');  // naming the route 'home'
 
 Route::get('posts/{post:slug}', function (Post $post) {
 
@@ -84,13 +85,16 @@ Route::get('catagories/{catagory:slug}', function (Catagory $catagory) {
     // $post = Post::find($slug);
 
     return view('posts', [
-        'posts' => $catagory->posts->load(['catagory','author'])
+        'posts' => $catagory->posts->load(['catagory','author']),
+        'currentCatagory'=> $catagory,
+        'catagories' => Catagory::all()
     ]);
-});
+})->name('catagory');  // naming the route catagory
 
 Route::get('authors/{author:userName}', function (User $author) {
 
     return view('posts', [
-        'posts' => $author->posts->load(['catagory','author'])
+        'posts' => $author->posts->load(['catagory','author']),
+        'catagories' => Catagory::all()
     ]);
 });
