@@ -9,11 +9,11 @@
     </x-slot>
 
 
-    <x-dropdown-items href="/" :active="request()->routeIs('home')">All</x-dropdown-items>
+    <x-dropdown-items href="/?{{ http_build_query(request()->except('catagory', 'page')) }}" :active="request()->routeIs('home')">All</x-dropdown-items>
 
     @foreach ($catagories as $catagory)
         {{-- :active="isset($currentCatagory) && $currentCatagory->is($catagory)" --}}
-        <x-dropdown-items href="/?catagory={{ $catagory->slug }}&{{ http_build_query(request()->except('catagory')) }}" :active="request()->is('catagories/' . $catagory->slug)">
+        <x-dropdown-items href="/?catagory={{ $catagory->slug }}&{{ http_build_query(request()->except('catagory', 'page')) }}" :active="request()->is('catagories/' . $catagory->slug)">
             {{-- it checks the url and check if the catagory-> slug is equals to the url --}}
             {{ ucwords($catagory->name) }}</x-dropdown-items>
     @endforeach
