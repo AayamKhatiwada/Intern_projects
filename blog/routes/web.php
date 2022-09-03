@@ -94,22 +94,23 @@ Route::get('posts/{post:slug}', [PostController::class,'show']
 //constraints
 
 
-Route::get('catagories/{catagory:slug}', function (Catagory $catagory) {
+// Route::get('catagories/{catagory:slug}', function (Catagory $catagory) {
 
-    // find a post by its slug and pass it to a view called "post"
-    // $post = Post::find($slug);
+//     // find a post by its slug and pass it to a view called "post"
+//     // $post = Post::find($slug);
 
-    return view('posts', [
-        'posts' => $catagory->posts->load(['catagory', 'author']),
-        'currentCatagory' => $catagory,
-        'catagories' => Catagory::all()
-    ]);
-})->name('catagory');  // naming the route catagory
+//     return view('posts', [
+//         'posts' => $catagory->posts->load(['catagory', 'author']),
+//         'currentCatagory' => $catagory,
+//         'catagories' => Catagory::all()
+//     ]);
+// })->name('catagory');  // naming the route catagory
 
-Route::get('authors/{author:userName}', function (User $author) {
 
-    return view('posts', [
-        'posts' => $author->posts->load(['catagory', 'author']),
-        'catagories' => Catagory::all()
-    ]);
-});
+// Route::get('authors/{author:userName}', function (User $author) {
+
+//     return view('post.index', [
+//         'posts' => $author->posts->load(['catagory', 'author']),
+//         'catagories' => Catagory::all()
+//     ]);
+// });

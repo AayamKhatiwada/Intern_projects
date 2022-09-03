@@ -7,27 +7,7 @@
         <!--  Category -->
 
         <div class="relative lg:inline-flex items-center bg-gray-100 rounded-xl">
-            <x-dropdown>
-                <x-slot name="trigger">
-                    <button class="py-2 pl-3 pr-9 text-sm font-semibold w-full text-left flex lg:inline-flex">
-
-                        {{ isset($currentCatagory) ? ucwords($currentCatagory->name) : 'Catagories' }}
-
-                        <x-icons name="dropDown" class=" absolute pointer-events-none" style="right: 12px;"></x-icons>
-                    </button>
-                </x-slot>
-
-
-                <x-dropdown-items href="/" :active="request()->routeIs('home')">All</x-dropdown-items>
-
-                @foreach ($catagories as $catagory)
-                    {{-- :active="isset($currentCatagory) && $currentCatagory->is($catagory)" --}}
-                    <x-dropdown-items href="/catagories/{{ $catagory->slug }}" :active="request()->is('catagories/' . $catagory->slug)">
-                        {{-- it checks the url and check if the catagory-> slug is equals to the url --}}
-                        {{ ucwords($catagory->name) }}</x-dropdown-items>
-                @endforeach
-
-            </x-dropdown>
+            <x-catagory-dropdown/>
         </div>
 
         <!-- Other Filters -->
@@ -55,6 +35,13 @@
         <!-- Search -->
         <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl px-3 py-2">
             <form method="GET" action="#">
+
+                @if (request('catagory'))
+
+                    <input type="hidden" name="catagory" value="{{ request('catagory') }}">
+                    
+                @endif
+
                 <input type="text" name="search" placeholder="Find something"
                     class="bg-transparent placeholder-black font-semibold text-sm" value="{{ request('search') }}">
             </form>

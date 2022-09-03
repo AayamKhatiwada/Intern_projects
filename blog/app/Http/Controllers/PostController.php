@@ -11,14 +11,13 @@ class PostController extends Controller
     public function index(){
         
         // calls Post::all which is one of the function provided by collection
-        return view('posts', [
+        return view('post.index', [
     
             // we have to run sql query for every post
             // 'posts' => Post::all()
     
             // we just have to run sql query once to get all the posts
-            'posts' => Post::latest()->filter(request(['search']))->get(),
-            'catagories' => Catagory::all()
+            'posts' => Post::latest()->filter(request(['search','catagory','author']))->get()
         ]);
     }
 
@@ -27,7 +26,7 @@ class PostController extends Controller
         // find a post by its slug and pass it to a view called "post"
         // $post = Post::find($slug);
     
-        return view('post', [
+        return view('post.show', [
             'post' => $post
         ]);
     }
