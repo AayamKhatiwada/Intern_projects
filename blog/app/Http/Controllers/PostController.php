@@ -8,6 +8,8 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
+
+    // seven restful actions : index,show,create,store,edit,update,destroy
     public function index(){
         
         // calls Post::all which is one of the function provided by collection
@@ -30,6 +32,7 @@ class PostController extends Controller
             'post' => $post
         ]);
     }
+    
     
 
     // protected function getPost(){
