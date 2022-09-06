@@ -1,5 +1,3 @@
-
-
 <x-layout>
     <main class="max-w-6xl mx-auto mt-10 lg:mt-20 space-y-6">
         <article class="max-w-4xl mx-auto lg:grid lg:grid-cols-12 gap-x-10">
@@ -39,7 +37,7 @@
                     </a>
 
                     <div class="space-x-2">
-                        <x-catagory-button :catagory='$post->catagory'/>
+                        <x-catagory-button :catagory='$post->catagory' />
                     </div>
                 </div>
 
@@ -52,6 +50,13 @@
                 </div>
             </div>
         </article>
+
+        <section class="col-span-8 col-start-5 mt-10 space-y-6">
+            @include('posts._add-comment')
+            @foreach ($post->comments as $comment)
+                <x-post-comment :comment="$comment" />
+            @endforeach
+        </section>
     </main>
 
     {{-- <article>
