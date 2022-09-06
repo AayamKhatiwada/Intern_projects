@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PostCommentController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegisterController;
@@ -7,6 +8,7 @@ use App\Http\Controllers\SessionController;
 use App\Models\Catagory;
 use App\Models\Post;
 use App\Models\User;
+use App\Services\Newsletter;
 use Illuminate\Log\Logger;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
@@ -25,7 +27,8 @@ use Symfony\Component\HttpKernel\DependencyInjection\RegisterControllerArgumentL
 */
 
 // basic routings and views
-Route::get('/', 
+Route::get(
+    '/',
     // function () {
 
     // using collection to store data
@@ -79,20 +82,22 @@ Route::get('/',
     // ]);
     // }
 
-    [PostController::class,'index']
+    [PostController::class, 'index']
 )->name('home');  // naming the route 'home'
 
-Route::get('posts/{post:slug}', [PostController::class,'show']
-    
-//     function (Post $post) {
+Route::get(
+    'posts/{post:slug}',
+    [PostController::class, 'show']
 
-//     // find a post by its slug and pass it to a view called "post"
-//     // $post = Post::find($slug);
+    //     function (Post $post) {
 
-//     return view('post', [
-//         'post' => $post
-//     ]);
-// }
+    //     // find a post by its slug and pass it to a view called "post"
+    //     // $post = Post::find($slug);
+
+    //     return view('post', [
+    //         'post' => $post
+    //     ]);
+    // }
 );
 // ->where('post', '[A-z_/-]+'); 
 //constraints
@@ -128,4 +133,6 @@ Route::post('logout', [SessionController::class, 'destroy'])->middleware('auth')
 
 Route::post('login', [SessionController::class, 'store'])->middleware('guest');
 
-Route::post('posts/{ post:slug }/comments',[PostCommentController::class,'store']);
+Route::post('posts/{ post:slug }/comments', [PostCommentController::class, 'store']);
+
+Route::post('newsletter', NewsletterController::class);
