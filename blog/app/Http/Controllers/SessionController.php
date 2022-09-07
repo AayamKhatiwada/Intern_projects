@@ -14,7 +14,7 @@ class SessionController extends Controller
 
     public function destroy()
     {
-        auth()->guest();
+        auth()->logout();
 
         return redirect('/')->with('success', 'GoodBye!');
     }
@@ -34,19 +34,18 @@ class SessionController extends Controller
         if (!auth()->attempt($attribute)) {
             // auth failed
             // first way
-            ValidationException::withMessages([
+             throw ValidationException::withMessages([
                 'email' => 'Your provided credentials could not be verified.'
             ]);
         }
         
         // deals with session fixtation
-        session()->regenerate();
+        // session()->regenerate();
+
         // redirect with a sucess flash message
         return redirect('/')->with('success', 'Welcome Back!');
 
         // second way
-        return back()
-            ->withInput()
-            ->withErrors(['email' => 'Your provided credentials could not be verified.']);
+        // return back()->withInput()->withErrors(['email' => 'Your provided credentials could not be verified.']);
     }
 }

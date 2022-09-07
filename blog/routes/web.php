@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminPostsController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PostCommentController;
 use App\Http\Controllers\PostController;
@@ -27,112 +28,32 @@ use Symfony\Component\HttpKernel\DependencyInjection\RegisterControllerArgumentL
 */
 
 // basic routings and views
-Route::get(
-    '/',
-    // function () {
+Route::get('/',[PostController::class, 'index'])->name('home');  // naming the route 'home'
 
-    // using collection to store data
-
-    // using foreach 
-
-    // $posts = [];
-
-    // foreach ($files as $file){
-    //     $document = YamlFrontMatter::parseFile($file);
-
-    //     $posts[] = new Post(
-    //         $document->title,
-    //         $document->excerpt,
-    //         $document->date,
-    //         $document->body(),
-    //         $document->slug,
-    //     );
-    // }
-
-
-    // $object = YamlFrontMatter::parseFile(
-    //     resource_path('posts/my-first-post.html')
-    // );
-
-    // ddd($object -> title);
-
-    // return Post::find('my-first-post');
-
-    // it listens all the mysql query and shows in storage/logs/laravel.log
-    // DB::listen(function ($query){
-    //     logger($query->sql, $query->bindings);
-    // });
-
-    // $posts = Post::latest();
-
-    // if (request('search')) {
-    //     $posts->where('title', 'like', '%'. request('search'). '%')
-    //     ->orWhere('body','like', '%'.request('search').'%');
-    // }
-
-    // // calls Post::all which is one of the function provided by collection
-    // return view('posts', [
-
-    //     // we have to run sql query for every post
-    //     // 'posts' => Post::all()
-
-    //     // we just have to run sql query once to get all the posts
-    //     'posts' => $posts->get(),
-    //     'catagories' => Catagory::all()
-    // ]);
-    // }
-
-    [PostController::class, 'index']
-)->name('home');  // naming the route 'home'
-
-Route::get(
-    'posts/{post:slug}',
-    [PostController::class, 'show']
-
-    //     function (Post $post) {
-
-    //     // find a post by its slug and pass it to a view called "post"
-    //     // $post = Post::find($slug);
-
-    //     return view('post', [
-    //         'post' => $post
-    //     ]);
-    // }
-);
-// ->where('post', '[A-z_/-]+'); 
-//constraints
-
-
-// Route::get('catagories/{catagory:slug}', function (Catagory $catagory) {
-
-//     // find a post by its slug and pass it to a view called "post"
-//     // $post = Post::find($slug);
-
-//     return view('posts', [
-//         'posts' => $catagory->posts->load(['catagory', 'author']),
-//         'currentCatagory' => $catagory,
-//         'catagories' => Catagory::all()
-//     ]);
-// })->name('catagory');  // naming the route catagory
-
-
-// Route::get('authors/{author:userName}', function (User $author) {
-
-//     return view('post.index', [
-//         'posts' => $author->posts->load(['catagory', 'author']),
-//         'catagories' => Catagory::all()
-//     ]);
-// });
+Route::get('posts/{post:slug}',[PostController::class, 'show']);
 
 
 Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
 Route::post('register', [RegisterController::class, 'store'])->middleware('guest');
 
 Route::get('login', [SessionController::class, 'create'])->middleware('guest');
-Route::post('logout', [SessionController::class, 'destroy'])->middleware('auth');
-
 Route::post('login', [SessionController::class, 'store'])->middleware('guest');
 
-Route::post('posts/{ post:slug }/comments', [PostCommentController::class, 'store']);
+Route::post('logout', [SessionController::class, 'destroy'])->middleware('auth');
 
-Route::post('newsletter', NewsletterController::class);
+Route::get('posts/{post:slug}', [PostController::class, 'show']);
+Route::post('posts/{post:slug}/comments', [PostCommentController::class, 'store']);
+
+Route::post('newsletter', [NewsletterController::class]);
+
+Route::get('admin/posts', [AdminPostsController::class, 'index'])->middleware('admin');
+Route::post('admin/posts', [AdminPostsController::class, 'store'])->middleware('admin');
+Route::get('admin/posts/create', [AdminPostsController::class, 'create'])->middleware('admin');
+Route::get('admin/posts/{post}/edit', [AdminPostsController::class, 'edit'])->middleware('admin');
+Route::patch('admin/posts/{post}', [AdminPostsController::class, 'update'])->middleware('admin');
+Route::delete('admin/posts/{post}', [AdminPostsController::class, 'destroy'])->middleware('admin');
+
+// Admin Section
+// Route::middleware('can:admin')->group(function () {
+//     Route::resource('admin/posts', AdminPostsController::class)->except('show');
+// });
