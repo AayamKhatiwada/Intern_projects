@@ -21,11 +21,20 @@ class AdminPostsController extends Controller
 
     public function store()
     {
-        Post::create(array_merge($this->validatePost(), [
-            'user_id' => request()->user()->id,
-            'thumbnail' => request()->file('thumbnail')->store('thumbnails')
-        ]));
-
+        $attributes = request()->validate([
+            'title' => 'required',
+            'slug' => ['required', Rule::unique('posts','slug')],   
+            'excerpt' => 'required',
+            'thumbnail' => 'required|image',
+            'body' => 'required',
+            'catagory_id' => ['required', Rule::exists('catagories','id')],
+        ]);
+      
+     
+        $attributes['user_id']= auth()->id();
+        $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnail');
+        
+        Post::create($attributes);
         return redirect('/');
     }
 
@@ -40,13 +49,9 @@ class AdminPostsController extends Controller
     {
         $attributes = $this->validatePost($post);
 
-        if ($attributes['thumbnail'] ?? false) {
-            $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
-        }
-
         $post->update($attributes);
 
-        return back()->with('success', 'Post Updated!');
+        return redirect('/');
     }
 
     public function destroy(Post $post)
@@ -67,7 +72,7 @@ class AdminPostsController extends Controller
             'slug' => ['required', Rule::unique('posts', 'slug')->ignore($post)],
             'excerpt' => 'required',
             'body' => 'required',
-            'category_id' => ['required', Rule::exists('categories', 'id')]
+            'catagory_id' => ['required', Rule::exists('categories', 'id')]
         ]);
     }
 }

@@ -30,9 +30,9 @@ class AppServiceProvider extends ServiceProvider
         // it helps to unguard all the fillable properties that we have mentioned in the models
         Model::unguard();
 
-        // Gate::define('admin', function (User $user) {
-        //     return $user->username === 'aayam';
-        // });
+        Gate::define('admin', function (User $user) {
+            return $user->userName === 'aayam';
+        });
 
         Blade::if('admin', function () {
             return request()->user()?->can('admin');

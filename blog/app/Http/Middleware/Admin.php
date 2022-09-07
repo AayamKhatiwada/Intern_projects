@@ -19,6 +19,7 @@ class Admin
         if(auth()->user()?->name!='aayam'){
             abort(403); 
         }
+
         return $next($request);
     }
 }

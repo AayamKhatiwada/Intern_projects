@@ -10,18 +10,16 @@
             <x-form.textarea name="body" required />
 
             <x-form.field>
-                <x-form.label name="category"/>
+                <x-form.label name="category" />
 
-                <select name="category_id" id="category_id" required>
-                    @foreach (\App\Models\Category::all() as $category)
-                        <option
-                            value="{{ $category->id }}"
-                            {{ old('category_id') == $category->id ? 'selected' : '' }}
-                        >{{ ucwords($category->name) }}</option>
+                <select name="catagory_id" id="catagory_id" required>
+                    @foreach (\App\Models\Catagory::all() as $catagory)
+                        <option value="{{ $catagory->id }}" {{ old('catagory_id') == $catagory->id ? 'selected' : '' }}>
+                            {{ ucwords($catagory->name) }}</option>
                     @endforeach
                 </select>
 
-                <x-form.error name="category"/>
+                <x-form.error name="category" />
             </x-form.field>
 
             <x-form.button>Publish</x-form.button>

@@ -28,9 +28,9 @@ use Symfony\Component\HttpKernel\DependencyInjection\RegisterControllerArgumentL
 */
 
 // basic routings and views
-Route::get('/',[PostController::class, 'index'])->name('home');  // naming the route 'home'
+Route::get('/', [PostController::class, 'index'])->name('home');  // naming the route 'home'
 
-Route::get('posts/{post:slug}',[PostController::class, 'show']);
+Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
 
 Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
@@ -46,12 +46,15 @@ Route::post('posts/{post:slug}/comments', [PostCommentController::class, 'store'
 
 Route::post('newsletter', [NewsletterController::class]);
 
-Route::get('admin/posts', [AdminPostsController::class, 'index'])->middleware('admin');
-Route::post('admin/posts', [AdminPostsController::class, 'store'])->middleware('admin');
-Route::get('admin/posts/create', [AdminPostsController::class, 'create'])->middleware('admin');
-Route::get('admin/posts/{post}/edit', [AdminPostsController::class, 'edit'])->middleware('admin');
-Route::patch('admin/posts/{post}', [AdminPostsController::class, 'update'])->middleware('admin');
-Route::delete('admin/posts/{post}', [AdminPostsController::class, 'destroy'])->middleware('admin');
+Route::group(['middleware' => ['admin']], function () {
+    Route::get('admin/posts', [AdminPostsController::class, 'index']);
+    Route::post('admin/posts', [AdminPostsController::class, 'store']);
+    Route::get('admin/posts/create', [AdminPostsController::class, 'create']);
+    Route::get('admin/posts/{post}/edit', [AdminPostsController::class, 'edit']);
+    Route::patch('admin/posts/{post}', [AdminPostsController::class, 'update']);
+    Route::delete('admin/posts/{post}', [AdminPostsController::class, 'destroy']);
+});
+
 
 // Admin Section
 // Route::middleware('can:admin')->group(function () {
