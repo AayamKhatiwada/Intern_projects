@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -14,8 +15,19 @@ class LoginController extends Controller
         $attributes = $request->validate([
             'email'=> 'required|email',
             'password'=> 'required'
-        ]);
-        
-        auth()->attempt($attributes);
+        ]);   
+
+        if (auth()->attempt($attributes)){
+            return redirect('/');
+        }
+
+        return redirect('/');
+
+    }
+
+    public function destroy(){
+        auth()->logout();
+
+        return redirect('/');
     }
 }

@@ -39,15 +39,25 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/products">Products</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Sign in</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/register">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/register">LogOut</a>
-                </li>
+                @auth
+                    <li class="nav-item">
+                        <span class="nav-link">{{ ucwords(auth()->user()->name) }}</span>
+                    </li>
+                    <li class="nav-item">
+                        <form action="/logout" method="POST">
+                            @csrf
+
+                            <button type="submit" class="nav-link bg-light" style="border: none;">LogOut</button>
+                        </form>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Register</a>
+                    </li>
+                @endauth
             </ul>
             <form class="form-inline my-2 my-lg-0 d-flex">
                 <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">

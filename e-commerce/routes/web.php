@@ -20,10 +20,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [Controller::class, 'index']);
 
 Route::get('/products', [ProductController::class, 'index']);
-Route::get('/products/{slug}', [ProductController::class, 'show']);
+Route::get('/products/slug', [ProductController::class, 'show']);
+
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [LoginController::class, 'index']);
+    Route::post('/register', [RegisterController::class, 'store']);
+    Route::get('/register', [RegisterController::class, 'index']);
+});
+
+Route::post('/logout', [LoginController::class, 'destroy']);
 
 Route::post('/login', [LoginController::class, 'store']);
-Route::get('/login', [LoginController::class, 'index']);
-
-Route::post('/register', [RegisterController::class, 'store']);
-Route::get('/register', [RegisterController::class, 'index']);

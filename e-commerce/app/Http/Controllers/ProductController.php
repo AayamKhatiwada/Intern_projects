@@ -14,6 +14,6 @@ class ProductController extends Controller
     }
 
     public function show(){
-        
+        return view('detail-view');
     }
 }

@@ -7,11 +7,13 @@ use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('register');
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         // $user = new User();
         // $user->name = $request['name'];
         // $user->email = $request['email'];
@@ -19,6 +21,10 @@ class RegisterController extends Controller
 
         // $user->save();
 
-        User::create(['name'=>$request['name'],'email'=>$request['email'],'password'=>$request['password'],]);
+        $attributes = User::create(['name' => $request['name'], 'email' => $request['email'], 'password' => bcrypt($request['password']),]);
+
+        auth()->login($attributes);
+
+        return redirect('/');
     }
 }

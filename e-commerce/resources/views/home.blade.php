@@ -1,6 +1,6 @@
 <x-layout>
     <section>
-        <x-featured-product :images="$products"/>
+        <x-featured-product :images="$products" />
     </section>
 
     <section class="container my-5">
@@ -12,7 +12,7 @@
             @foreach ($products as $product)
                 <x-product-card :products="$product" />
             @endforeach
-            {{-- {{ $products->links() }} --}}
         </div>
     </section>
+    {{-- <div>{{ $products->links() }}</div> --}}
 </x-layout>
