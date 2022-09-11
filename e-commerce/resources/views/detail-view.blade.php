@@ -1,16 +1,16 @@
 <x-layout>
     <div>
-        Title
+        {{ $product->name }}
     </div>
-    <img src="https://images.pexels.com/photos/13350109/pexels-photo-13350109.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+    <img src="{{ $product->img_src }}"
         alt="" width="100px">
     <div>
-        catagory
+        {{ $product->catagory }}
     </div>
     <div>
-        price
+        {{ $product->price }}
     </div>
     <div>
-        description
+        {{ $product->description }}
     </div>
 </x-layout>

@@ -58,6 +58,9 @@
                         <a class="nav-link" href="/register">Register</a>
                     </li>
                 @endauth
+                <li class="nav-item">
+                    <a class="nav-link" href="/cart">Cart</a>
+                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0 d-flex">
                 <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">

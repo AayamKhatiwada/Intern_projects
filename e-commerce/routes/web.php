@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddToCartController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [Controller::class, 'index']);
 
 Route::get('/products', [ProductController::class, 'index']);
-Route::get('/products/slug', [ProductController::class, 'show']);
+Route::get('/products/{id}', [ProductController::class, 'show']);
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'index']);
@@ -31,3 +32,9 @@ Route::middleware('guest')->group(function () {
 Route::post('/logout', [LoginController::class, 'destroy']);
 
 Route::post('/login', [LoginController::class, 'store']);
+
+Route::get('/cart/{id}', [AddToCartController::class, 'store']);
+
+Route::get('/cart', [AddToCartController::class, 'index']);
+
+Route::get('/delete-cart/{id}', [AddToCartController::class, 'destory']);
