@@ -21,7 +21,14 @@ class RegisterController extends Controller
 
         // $user->save();
 
-        $attributes = User::create(['name' => $request['name'], 'email' => $request['email'], 'password' => bcrypt($request['password']),]);
+        // dd($request['phoneno']);
+
+        // dd($request);
+
+        // $attributes = User::create(['name' => $request['name'],  'email' => $request['email'], 'phoneno' => $request['phoneno'], 'address' => $request['address'], 'password' => bcrypt($request['password'])]);
+
+        $attributes = User::create(['name' => $request['name'], 'email' => $request['email'], 'password' => bcrypt($request['password']),'address' => $request['address'], 'phoneno' => $request['phoneno'], ]);
+
 
         auth()->login($attributes);
 

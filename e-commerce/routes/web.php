@@ -3,6 +3,7 @@
 use App\Http\Controllers\AddToCartController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
@@ -30,11 +31,13 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::post('/logout', [LoginController::class, 'destroy']);
-
 Route::post('/login', [LoginController::class, 'store']);
 
-Route::get('/cart/{id}', [AddToCartController::class, 'store']);
-
+Route::post('/cart/{id}', [AddToCartController::class, 'store']);
 Route::get('/cart', [AddToCartController::class, 'index']);
-
 Route::get('/delete-cart/{id}', [AddToCartController::class, 'destory']);
+Route::get('/delete-all-session', [AddToCartController::class, 'delete']);
+
+Route::get('/delivery-form', [OrderController::class, 'index']);
+Route::post('/delivery-form/submit-order', [OrderController::class, 'store']);
+
