@@ -62,8 +62,8 @@
                     <a class="nav-link" href="/cart">Cart</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0 d-flex">
-                <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="form-inline my-2 my-lg-0 d-flex" method="get" action="/products">
+                <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search" name='search' value="{{ request('search') }}">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>

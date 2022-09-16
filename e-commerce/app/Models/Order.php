@@ -15,6 +15,10 @@ class Order extends Model
     }
 
     public function users(){
-        return $this->hasMany(Product::class);
+        return $this->hasMany(User::class);
+    }
+
+    public function orderproducts(){
+        return $this->hasMany(OrderProduct::class);
     }
 }

@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
 
         for ($i = 0; $i < 12; $i++) {
             \App\Models\Product::factory()->create([
-                'price' => $i + 10 *2, 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sunt minus ullam labore quos adipisci reiciendis debitis! Fugit modi quae accusamus voluptate, ipsum laudantium, sint quasi, cum esse non dignissimos?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sunt minus ullam labore quos adipisci reiciendis debitis! Fugit modi quae accusamus voluptate, ipsum laudantium, sint quasi, cum esse non dignissimos?', 'catagory' => $catagory[$i], 'img_src' => $image[$i]
+                'price' => $i + 10 *2, 'catagory' => $catagory[$i], 'img_src' => $image[$i]
             ]);
         }
 

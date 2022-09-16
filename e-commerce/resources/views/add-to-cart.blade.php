@@ -1,13 +1,14 @@
 <x-layout>
     @if (Session::get('cart'))
-        <div class="container my-5" style="min-height: 400px">
+    <div class="container my-5" style="min-height: 400px">
+        <h1>Your Cart</h1>
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">Name</th>
-                        <th scope="col">Price per piece</th>
                         <th scope="col">Catagory</th>
                         <th scope="col">Quantity</th>
+                        <th scope="col">Price per piece</th>
                         <th scope="col">Total price</th>
                         <th scope="col"><a href="/delete-all-session">Delete All</a></th>
                     </tr>
@@ -16,9 +17,9 @@
                     @foreach (Session::get('cart') as $cart)
                         <tr>
                             <td>{{ $cart['name'] }}</td>
-                            <td>${{ $cart['price'] }}</td>
                             <td>{{ $cart['catagory'] }}</td>
                             <td>{{ $cart['quantity'] }}</td>
+                            <td>${{ $cart['price'] }}</td>
                             <td>${{ $cart['quantity']*$cart['price']  }}</td>
                             <td>
                                 <a href="/delete-cart/{{ $cart['id'] }}">Delete</a>

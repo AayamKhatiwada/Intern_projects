@@ -53,10 +53,6 @@ class AddToCartController extends Controller
         return redirect('/cart');
     }
 
-    public function update(Request $request,$id){
-        dd($request);
-    }
-
     public function destory($id){
         $cart = session()->get('cart');
 

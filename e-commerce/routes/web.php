@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [Controller::class, 'index']);
 
 Route::get('/products', [ProductController::class, 'index']);
-Route::get('/products/{id}', [ProductController::class, 'show']);
+Route::get('/products/{slug}', [ProductController::class, 'show']);
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'index']);

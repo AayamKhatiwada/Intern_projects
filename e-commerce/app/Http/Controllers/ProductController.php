@@ -8,14 +8,24 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index(){
+
+        $products = Product::latest();
+        
+        if(request('search')){
+            $products->where('name','like','%' . request('search') . '%')
+            ->orWhere('catagory','like','%'. request('search') . '%');
+        }
+        
+        // dd($products->get());
+
         return view('products', [
-            'products' => Product::paginate(12)
+            'products' => $products->get()
         ]);
     }
 
-    public function show($id){
+    public function show($slug){
         return view('detail-view',[
-            'product' => Product::find($id)
+            'product' => Product::where('slug',$slug)->first()
         ]);
     }
 }
